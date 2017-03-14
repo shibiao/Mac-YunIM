@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AE1EB3392745FE274016EC9 /* Pods_Mac_YunIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86068D6183DE18181463913B /* Pods_Mac_YunIM.framework */; };
 		8EB4450F1E76EC3A008E963C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4450E1E76EC3A008E963C /* AppDelegate.swift */; };
 		8EB445111E76EC3A008E963C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB445101E76EC3A008E963C /* ViewController.swift */; };
 		8EB445131E76EC3A008E963C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB445121E76EC3A008E963C /* Assets.xcassets */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FF2266DC8129E4F92661A58 /* Pods-Mac-YunIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mac-YunIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mac-YunIM/Pods-Mac-YunIM.release.xcconfig"; sourceTree = "<group>"; };
+		86068D6183DE18181463913B /* Pods_Mac_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mac_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB4450B1E76EC3A008E963C /* Mac-YunIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-YunIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB4450E1E76EC3A008E963C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EB445101E76EC3A008E963C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EB445121E76EC3A008E963C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EB445151E76EC3A008E963C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EB445171E76EC3A008E963C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F41849FCE9547C4CB42E81 /* Pods-Mac-YunIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mac-YunIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mac-YunIM/Pods-Mac-YunIM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE1EB3392745FE274016EC9 /* Pods_Mac_YunIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824DF51757B8E00EDB7E8B1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86068D6183DE18181463913B /* Pods_Mac_YunIM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EB445021E76EC3A008E963C = {
 			isa = PBXGroup;
 			children = (
 				8EB4450D1E76EC3A008E963C /* Mac-YunIM */,
 				8EB4450C1E76EC3A008E963C /* Products */,
+				B4BE384C2B5908645397329D /* Pods */,
+				824DF51757B8E00EDB7E8B1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +76,15 @@
 			path = "Mac-YunIM";
 			sourceTree = "<group>";
 		};
+		B4BE384C2B5908645397329D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8F41849FCE9547C4CB42E81 /* Pods-Mac-YunIM.debug.xcconfig */,
+				7FF2266DC8129E4F92661A58 /* Pods-Mac-YunIM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EB4451A1E76EC3A008E963C /* Build configuration list for PBXNativeTarget "Mac-YunIM" */;
 			buildPhases = (
+				7A897E9E989DD35B6D0CF5EE /* [CP] Check Pods Manifest.lock */,
 				8EB445071E76EC3A008E963C /* Sources */,
 				8EB445081E76EC3A008E963C /* Frameworks */,
 				8EB445091E76EC3A008E963C /* Resources */,
+				D5027C18240CD74DEFE2BE0E /* [CP] Embed Pods Frameworks */,
+				096D3DBCC70B8A2270E801E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +153,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		096D3DBCC70B8A2270E801E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mac-YunIM/Pods-Mac-YunIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A897E9E989DD35B6D0CF5EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5027C18240CD74DEFE2BE0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mac-YunIM/Pods-Mac-YunIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EB445071E76EC3A008E963C /* Sources */ = {
@@ -243,11 +318,13 @@
 		};
 		8EB4451B1E76EC3A008E963C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F41849FCE9547C4CB42E81 /* Pods-Mac-YunIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac-YunIM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hui.Mac-YunIM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -256,11 +333,13 @@
 		};
 		8EB4451C1E76EC3A008E963C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF2266DC8129E4F92661A58 /* Pods-Mac-YunIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac-YunIM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hui.Mac-YunIM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -286,6 +365,7 @@
 				8EB4451C1E76EC3A008E963C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
