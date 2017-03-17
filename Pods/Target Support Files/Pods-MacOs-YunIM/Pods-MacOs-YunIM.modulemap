@@ -1,0 +1,6 @@
+framework module Pods_MacOs_YunIM {
+  umbrella header "Pods-MacOs-YunIM-umbrella.h"
+
+  export *
+  module * { export * }
+}
