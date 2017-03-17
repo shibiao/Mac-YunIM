@@ -17,9 +17,14 @@ class LoginBottomView: NSView {
     
     class func initXib() -> LoginBottomView {
         var nilArr  = NSArray()
-        
-         Bundle.main.loadNibNamed("LoginBottomView", owner: self, topLevelObjects: &nilArr)
-        return nilArr.lastObject! as! LoginBottomView
+        Bundle.main.loadNibNamed("LoginBottomView", owner: self, topLevelObjects: &nilArr)
+        var temp : LoginBottomView?
+        for item in nilArr {
+            if item is LoginBottomView {
+                temp = item as? LoginBottomView
+            }
+        }
+        return temp!
     }
     
 }

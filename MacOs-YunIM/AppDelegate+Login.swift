@@ -18,5 +18,6 @@ extension AppDelegate {
         loginWd.window?.makeKeyAndOrderFront(nil)
         loginWd.window?.becomeKey()
         NSApp.beginModalSession(for: loginWd.window!)
+        mainWindow = loginWd
     }
 }

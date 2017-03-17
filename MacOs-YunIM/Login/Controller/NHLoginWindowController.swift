@@ -14,7 +14,7 @@ class NHLoginWindowController: NSWindowController {
     @IBOutlet weak var passWordTF: NSTextField!
     
     var bottomWindow : NSWindow?
-    @IBOutlet weak var bottomBtn: NSButton!
+    @IBOutlet weak var btn: NSButton!
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -34,17 +34,20 @@ class NHLoginWindowController: NSWindowController {
         //消除 编辑时 系统自带的边框效果
         PhoneTextFT.focusRingType = .none;
         passWordTF.focusRingType  = .none;
-        bottomBtn.target = self
-        bottomBtn.action = #selector(NHLoginWindowController.bottomClick)
+        btn.target = self
+        btn.action = #selector(NHLoginWindowController.bottomClick(_:))
     }
     
-    func bottomClick() {
+    func bottomClick(_ sender : NSButton) {
         if (bottomWindow != nil) {
             self.window?.removeChildWindow(bottomWindow!)
             bottomWindow = nil
         } else {
             createBottomWindow()
         }
+    }
+    
+    @IBAction func btnClick(_ sender: Any) {
     }
     func createBottomWindow() {
         bottomWindow = NSWindow()

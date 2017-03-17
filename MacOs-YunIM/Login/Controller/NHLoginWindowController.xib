@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NHLoginWindowController" customModule="Mac_YunIM" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="NHLoginWindowController" customModule="MacOs_YunIM" customModuleProvider="target">
             <connections>
                 <outlet property="PhoneTextFT" destination="dSV-4j-TTa" id="50s-kU-hzg"/>
-                <outlet property="bottomBtn" destination="NvG-Nm-cO3" id="Cg1-FN-bGb"/>
+                <outlet property="btn" destination="NvG-Nm-cO3" id="RtT-0F-B2i"/>
                 <outlet property="passWordTF" destination="Sn6-Qx-awe" id="xve-2W-ajN"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -85,6 +85,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="btnClick:" target="-2" id="zgg-89-n4N"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -105,7 +108,8 @@
                 </constraints>
             </view>
             <connections>
-                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+                <outlet property="delegate" destination="-2" id="96y-l3-kxE"/>
+                <outlet property="initialFirstResponder" destination="se5-gp-TjO" id="ZQC-Bk-EP5"/>
             </connections>
             <point key="canvasLocation" x="120" y="-21"/>
         </window>

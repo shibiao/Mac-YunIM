@@ -11,6 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var mainWindow : NSWindowController!
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.checkLoginApplicationDidFinishLaunching(aNotification)
     }
