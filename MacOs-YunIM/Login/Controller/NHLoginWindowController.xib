@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NHLoginWindowController" customModule="Mac_YunIM" customModuleProvider="target">
+            <connections>
+                <outlet property="PhoneTextFT" destination="dSV-4j-TTa" id="50s-kU-hzg"/>
+                <outlet property="bottomBtn" destination="NvG-Nm-cO3" id="Cg1-FN-bGb"/>
+                <outlet property="passWordTF" destination="Sn6-Qx-awe" id="xve-2W-ajN"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="250" height="290"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <value key="minSize" type="size" width="300" height="400"/>
+            <value key="maxSize" type="size" width="300" height="400"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="290"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d95-PY-5qV">
+                        <rect key="frame" x="0.0" y="155" width="250" height="135"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="5Bb-sy-pFC"/>
+                            <constraint firstAttribute="height" constant="135" id="IRH-sK-8fD"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="loginBG" id="Z1u-Rq-R6L"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-4j-TTa">
+                        <rect key="frame" x="38" y="108" width="174" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Mo6-Zs-1kE"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="请输入账号" id="QzA-k0-8Hg">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sn6-Qx-awe">
+                        <rect key="frame" x="38" y="71" width="174" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="owY-HD-Qoh"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="请输入密码" id="3UG-f9-tia">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HPD-nE-UpI">
+                        <rect key="frame" x="40" y="107" width="170" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jH5-GM-xRl"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" drawsBackground="YES" id="wJi-Md-vHq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D1U-pg-eP7">
+                        <rect key="frame" x="40" y="70" width="170" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="BQ9-3w-9fn"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" drawsBackground="YES" id="gym-YQ-05b">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NvG-Nm-cO3">
+                        <rect key="frame" x="101" y="20" width="48" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="xiala" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="X9k-mO-ddh">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sn6-Qx-awe" firstAttribute="top" secondItem="dSV-4j-TTa" secondAttribute="bottom" constant="15" id="5BQ-mf-DnO"/>
+                    <constraint firstItem="dSV-4j-TTa" firstAttribute="top" secondItem="d95-PY-5qV" secondAttribute="bottom" constant="25" id="EMY-7l-rqu"/>
+                    <constraint firstItem="Sn6-Qx-awe" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="40" id="EjA-IZ-Jvo"/>
+                    <constraint firstItem="D1U-pg-eP7" firstAttribute="top" secondItem="Sn6-Qx-awe" secondAttribute="bottom" id="LnH-l0-pPh"/>
+                    <constraint firstAttribute="trailing" secondItem="dSV-4j-TTa" secondAttribute="trailing" constant="40" id="RZr-FI-oQL"/>
+                    <constraint firstItem="d95-PY-5qV" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="Vu3-uo-rke"/>
+                    <constraint firstItem="dSV-4j-TTa" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="40" id="ab4-VH-YEm"/>
+                    <constraint firstItem="HPD-nE-UpI" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="40" id="c48-Wg-m2R"/>
+                    <constraint firstAttribute="trailing" secondItem="HPD-nE-UpI" secondAttribute="trailing" constant="40" id="cQe-ON-kNw"/>
+                    <constraint firstAttribute="trailing" secondItem="Sn6-Qx-awe" secondAttribute="trailing" constant="40" id="cfe-7j-bKc"/>
+                    <constraint firstAttribute="trailing" secondItem="D1U-pg-eP7" secondAttribute="trailing" constant="40" id="ert-fp-h75"/>
+                    <constraint firstItem="D1U-pg-eP7" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="40" id="qZq-J7-ikP"/>
+                    <constraint firstItem="d95-PY-5qV" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="tdV-fp-u50"/>
+                    <constraint firstItem="HPD-nE-UpI" firstAttribute="top" secondItem="dSV-4j-TTa" secondAttribute="bottom" id="vJT-um-GSE"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="-21"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="loginBG" width="250" height="134.5"/>
+        <image name="xiala" width="16" height="16"/>
+    </resources>
+</document>
