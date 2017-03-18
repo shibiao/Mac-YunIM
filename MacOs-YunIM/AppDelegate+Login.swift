@@ -14,10 +14,10 @@ extension AppDelegate {
     func checkLoginApplicationDidFinishLaunching(_ aNotification: Notification) {
         
         let loginWd = NHLoginWindowController(windowNibName: "NHLoginWindowController")
-        loginWd.showWindow(self)
+        loginWd.showWindow(nil)
         loginWd.window?.makeKeyAndOrderFront(nil)
-        loginWd.window?.becomeKey()
-        NSApp.beginModalSession(for: loginWd.window!)
+//        loginWd.window?.becomeKey()
+//        NSApp.beginModalSession(for: loginWd.window!)
         mainWindow = loginWd
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import Quartz
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -15,11 +15,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.checkLoginApplicationDidFinishLaunching(aNotification)
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        
+        self.mainWindow.window?.makeKeyAndOrderFront(nil)
+        return true
     }
-
-
+    func applicationWillResignActive(_ notification: Notification) {
+        QLPreviewPanel.shared().close()
+    }
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return false
+    }
 }
 

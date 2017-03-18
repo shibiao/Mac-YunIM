@@ -16,6 +16,7 @@
 		8E09B7011E7BD3EF00009BC4 /* NHLoginWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6FC1E7BD3EF00009BC4 /* NHLoginWindowController.xib */; };
 		8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */; };
 		8E09B7031E7BD3EF00009BC4 /* LoginBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */; };
+		8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8E09B6FC1E7BD3EF00009BC4 /* NHLoginWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHLoginWindowController.xib; sourceTree = "<group>"; };
 		8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBottomView.swift; sourceTree = "<group>"; };
 		8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginBottomView.xib; sourceTree = "<group>"; };
+		8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDefine.swift; sourceTree = "<group>"; };
 		EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOs_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			children = (
 				8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */,
 				8E09B6F71E7BD3E300009BC4 /* AppDelegate+Login.swift */,
+				8E203A2E1E7CDD5A00AABB87 /* Tool */,
 				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E09B6EC1E7BD3C700009BC4 /* Assets.xcassets */,
 				8E09B6EE1E7BD3C700009BC4 /* MainMenu.xib */,
@@ -110,6 +113,30 @@
 				8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8E203A2E1E7CDD5A00AABB87 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8E203A301E7CDDC000AABB87 /* NetWork */,
+				8E203A2F1E7CDD5A00AABB87 /* Category */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		8E203A2F1E7CDD5A00AABB87 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8E203A301E7CDDC000AABB87 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		D5BB912838E7A5BD9B6EDB02 /* Pods */ = {
@@ -248,6 +275,7 @@
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */,
 				8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */,
+				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +433,7 @@
 				8E09B6F61E7BD3C700009BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
