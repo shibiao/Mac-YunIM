@@ -8,14 +8,13 @@
 
 import Cocoa
 
-class NHLoginWindowController: NSWindowController {
+class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDelegate
+{
 
     @IBOutlet weak var PhoneTextFT: NSTextField!
     @IBOutlet weak var passWordTF: NSTextField!
-    
-    var bottomWindow : NSWindow?
+    var bottomDrawer : NSDrawer?
     @IBOutlet weak var btn: NSButton!
-    
     override func windowDidLoad() {
         super.windowDidLoad()
         setUpUI()
@@ -34,28 +33,58 @@ class NHLoginWindowController: NSWindowController {
         //消除 编辑时 系统自带的边框效果
         PhoneTextFT.focusRingType = .none;
         passWordTF.focusRingType  = .none;
+        PhoneTextFT.delegate = self;
+        passWordTF.delegate = self;
         btn.target = self
         btn.action = #selector(NHLoginWindowController.bottomClick(_:))
+        PhoneTextFT.becomeFirstResponder()
     }
-    
     func bottomClick(_ sender : NSButton) {
-        if (bottomWindow != nil) {
-            self.window?.removeChildWindow(bottomWindow!)
-            bottomWindow = nil
+        if (bottomDrawer != nil) {
+            bottomDrawer?.close()
         } else {
             createBottomWindow()
+            bottomDrawer?.open(on: .minY)
         }
     }
-    
-    @IBAction func btnClick(_ sender: Any) {
+    //功能建被点击 的通知   command ，shift等
+    override func flagsChanged(with event: NSEvent) {
+        print("123123")
+    }
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        
+        switch commandSelector.description {
+        case "insertNewline:":
+            if control == PhoneTextFT {
+                passWordTF.becomeFirstResponder()
+            } else {
+                print("登陆")
+            }
+            return false
+        case "insertTab:":
+            if control == passWordTF {
+                PhoneTextFT.becomeFirstResponder()
+            } else {
+                passWordTF.becomeFirstResponder()
+            }
+            return false
+        default:
+            print(commandSelector.description)
+        }
+        return true
     }
     func createBottomWindow() {
-        bottomWindow = NSWindow()
-        bottomWindow?.styleMask     = .borderless
-        bottomWindow?.backingType   = .nonretained
-        bottomWindow?.setFrame( NSMakeRect(self.window!.frame.origin.x, self.window!.frame.origin.y - 100, self.window!.frame.size.width, 100), display: true, animate: true)
-        bottomWindow?.contentView = self.bottomView
-        self.window?.addChildWindow(bottomWindow!, ordered: .below)
+        bottomDrawer = NSDrawer(contentSize: NSMakeSize(250, 100), preferredEdge: .maxX)
+        bottomDrawer?.delegate = self
+        bottomDrawer?.leadingOffset  = 0
+        bottomDrawer?.trailingOffset = 0
+        bottomDrawer?.minContentSize = NSMakeSize(250, 100)
+        bottomDrawer?.maxContentSize = NSMakeSize(250, 100)
+        bottomDrawer?.parentWindow   = self.window
+        bottomDrawer?.contentView    = self.bottomView
+    }
+    func drawerDidClose(_ notification: Notification) {
+        bottomDrawer = nil
     }
     lazy var bottomView : LoginBottomView =  {
         let view = LoginBottomView.initXib()
