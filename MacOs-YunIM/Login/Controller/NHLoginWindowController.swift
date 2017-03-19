@@ -59,6 +59,7 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
                 passWordTF.becomeFirstResponder()
             } else {
                 print("登陆")
+                app.showMainWindowController()
             }
             return false
         case "insertTab:":

@@ -11,6 +11,8 @@ import Cocoa
 //MARK: 接口
 public let ApiLogin = "ApiLogin"
 
+let app : AppDelegate =  (NSApplication.shared().delegate as! AppDelegate)
+
 
 
 

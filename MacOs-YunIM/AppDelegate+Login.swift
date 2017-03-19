@@ -16,8 +16,14 @@ extension AppDelegate {
         let loginWd = NHLoginWindowController(windowNibName: "NHLoginWindowController")
         loginWd.showWindow(nil)
         loginWd.window?.makeKeyAndOrderFront(nil)
-//        loginWd.window?.becomeKey()
-//        NSApp.beginModalSession(for: loginWd.window!)
         mainWindow = loginWd
+    }
+    
+    func showMainWindowController() {
+        let main = NSStoryboard.init(name: "MainWindowController", bundle: nil).instantiateInitialController() as!  MainWindowController
+        main.showWindow(nil)
+        main.window?.makeKeyAndOrderFront(nil)
+        mainWindow = main;
+
     }
 }
