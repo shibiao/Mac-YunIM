@@ -69,6 +69,7 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
             }
             return false
         default:
+            textView.perform(commandSelector, with: textView)
             print(commandSelector.description)
         }
         return true
