@@ -20,6 +20,9 @@
 		8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */; };
 		8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */; };
 		8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */; };
+		8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */; };
+		8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB11E7FA812001B87BA /* LoginModel.swift */; };
+		8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainWindowController.storyboard; sourceTree = "<group>"; };
 		8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRequest.swift; sourceTree = "<group>"; };
+		8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		8E9FBDB11E7FA812001B87BA /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOs_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,9 +91,9 @@
 			children = (
 				8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */,
 				8E09B6F71E7BD3E300009BC4 /* AppDelegate+Login.swift */,
+				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E9FBD831E7EDEE6001B87BA /* IMMain */,
 				8E203A2E1E7CDD5A00AABB87 /* Tool */,
-				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E09B6EC1E7BD3C700009BC4 /* Assets.xcassets */,
 				8E09B6EE1E7BD3C700009BC4 /* MainMenu.xib */,
 				8E09B6F11E7BD3C700009BC4 /* Info.plist */,
@@ -125,6 +131,7 @@
 		8E203A2E1E7CDD5A00AABB87 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8E9FBDAE1E7FA7EB001B87BA /* BaseModel */,
 				8E203A301E7CDDC000AABB87 /* NetWork */,
 				8E203A2F1E7CDD5A00AABB87 /* Category */,
 			);
@@ -154,6 +161,16 @@
 				8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */,
 			);
 			path = IMMain;
+			sourceTree = "<group>";
+		};
+		8E9FBDAE1E7FA7EB001B87BA /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */,
+				8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */,
+				8E9FBDB11E7FA812001B87BA /* LoginModel.swift */,
+			);
+			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		D5BB912838E7A5BD9B6EDB02 /* Pods */ = {
@@ -294,8 +311,11 @@
 				8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */,
 				8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */,
 				8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */,
+				8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */,
+				8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */,
 				8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */,
 				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
+				8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

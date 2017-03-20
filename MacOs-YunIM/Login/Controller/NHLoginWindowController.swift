@@ -75,6 +75,9 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
         }
         return true
     }
+    func loginClick() {
+        
+    }
     func createBottomWindow() {
         bottomDrawer = NSDrawer(contentSize: NSMakeSize(250, 100), preferredEdge: .maxX)
         bottomDrawer?.delegate = self

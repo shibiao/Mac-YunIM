@@ -17,7 +17,7 @@ typealias callBack = (Response<Any, String>) -> Void
 struct NHRequest {
     
     static func request(_ url: String,request: @escaping callBack) {
-        Alamofire.request(url,headers:self.UserAgent).responseJSON { (response) in
+        Alamofire.request(url,headers:UserAgent).responseJSON { (response) in
             switch response.result {
             case .success(let data):
                 request(.Success(data))
@@ -27,7 +27,7 @@ struct NHRequest {
         }
     }
     static func request(_ url: String , parms: [String : Any]?,request: @escaping callBack) {
-        Alamofire.request(url,parameters:parms,headers:self.UserAgent).responseJSON { (response) in
+        Alamofire.request(url,parameters:parms,headers:UserAgent).responseJSON { (response) in
             switch response.result {
             case .success(let data):
                 request(.Success(data)) 
