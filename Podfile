@@ -6,5 +6,7 @@ target 'MacOs-YunIM' do
   use_frameworks!
 
    pod 'Alamofire', '4.4.0'
-
+   pod 'FMDB', '2.6.2'
+   pod 'YYModel', '1.0.4'
+   pod 'Kingfisher', '3.5.1'
 end

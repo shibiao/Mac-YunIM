@@ -59,7 +59,7 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
                 passWordTF.becomeFirstResponder()
             } else {
                 print("登陆")
-                app.showMainWindowController()
+                loginClick()
             }
             return false
         case "insertTab:":
@@ -76,6 +76,18 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
         return true
     }
     func loginClick() {
+        NHLoginTool.login(self.PhoneTextFT.stringValue, self.passWordTF.stringValue) { (response) in
+            switch response {
+            case .Success( _):
+                app.showMainWindowController()
+                NHLoginTool.userPofile(self.userRequest)
+                break
+            case .Failure(let _):
+                break
+            }
+        }
+    }
+    func userRequest(_ response: Response<Any, String>) {
         
     }
     func createBottomWindow() {

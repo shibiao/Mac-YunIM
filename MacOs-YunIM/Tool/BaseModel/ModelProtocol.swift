@@ -23,10 +23,10 @@ extension ModelProtocol where Self: NSObject {
         for i in 0 ..< Int(count) {
             let property = properties?[i]
             let name = property_getName(property)
-            let strName = String(describing: name);
-            let value = self.value(forKey: strName)
-            encder.encode(value, forKey: strName)
-            propertyNames.append(strName);
+            let strName = String.init(utf8String: name!)
+            let value = self.value(forKey: strName!)
+            encder.encode(value, forKey: strName!)
+            propertyNames.append(strName!);
         }
         free(properties)
     }
@@ -37,10 +37,10 @@ extension ModelProtocol where Self: NSObject {
         for i in 0 ..< Int(count) {
             let property = properties?[i]
             let name = property_getName(property)
-            let strName = String(describing: name);
-            let value = aDecoder.decodeObject(forKey: strName)
-            self.setValue(value, forKey: strName)
-            propertyNames.append(strName);
+            let strName = String.init(utf8String: name!)
+            let value = aDecoder.decodeObject(forKey: strName!)
+            self.setValue(value, forKey: strName!)
+            propertyNames.append(strName!);
         }
         free(properties)
     }

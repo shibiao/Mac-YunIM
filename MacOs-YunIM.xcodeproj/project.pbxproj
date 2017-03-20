@@ -23,6 +23,10 @@
 		8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */; };
 		8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB11E7FA812001B87BA /* LoginModel.swift */; };
 		8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */; };
+		8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB51E802CDA001B87BA /* NHLoginTool.swift */; };
+		8E9FBDBA1E8035CC001B87BA /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB91E8035CC001B87BA /* Model.m */; };
+		8E9FBDBC1E8038DF001B87BA /* UserPofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBB1E8038DF001B87BA /* UserPofile.swift */; };
+		8E9FBDBE1E8041EC001B87BA /* MainLeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBD1E8041EC001B87BA /* MainLeftController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,12 @@
 		8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		8E9FBDB11E7FA812001B87BA /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		8E9FBDB51E802CDA001B87BA /* NHLoginTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHLoginTool.swift; sourceTree = "<group>"; };
+		8E9FBDB71E8035CB001B87BA /* MacOs-YunIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacOs-YunIM-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E9FBDB81E8035CC001B87BA /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		8E9FBDB91E8035CC001B87BA /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		8E9FBDBB1E8038DF001B87BA /* UserPofile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPofile.swift; sourceTree = "<group>"; };
+		8E9FBDBD1E8041EC001B87BA /* MainLeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLeftController.swift; sourceTree = "<group>"; };
 		EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOs_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,12 +101,15 @@
 			children = (
 				8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */,
 				8E09B6F71E7BD3E300009BC4 /* AppDelegate+Login.swift */,
+				8E9FBDB81E8035CC001B87BA /* Model.h */,
+				8E9FBDB91E8035CC001B87BA /* Model.m */,
 				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E9FBD831E7EDEE6001B87BA /* IMMain */,
 				8E203A2E1E7CDD5A00AABB87 /* Tool */,
 				8E09B6EC1E7BD3C700009BC4 /* Assets.xcassets */,
 				8E09B6EE1E7BD3C700009BC4 /* MainMenu.xib */,
 				8E09B6F11E7BD3C700009BC4 /* Info.plist */,
+				8E9FBDB71E8035CB001B87BA /* MacOs-YunIM-Bridging-Header.h */,
 			);
 			path = "MacOs-YunIM";
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		8E09B6FA1E7BD3EF00009BC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E9FBDB51E802CDA001B87BA /* NHLoginTool.swift */,
 				8E09B6FB1E7BD3EF00009BC4 /* NHLoginWindowController.swift */,
 				8E09B6FC1E7BD3EF00009BC4 /* NHLoginWindowController.xib */,
 			);
@@ -159,6 +173,7 @@
 			children = (
 				8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */,
 				8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */,
+				8E9FBDBD1E8041EC001B87BA /* MainLeftController.swift */,
 			);
 			path = IMMain;
 			sourceTree = "<group>";
@@ -169,6 +184,7 @@
 				8E9FBDAF1E7FA7F5001B87BA /* ModelProtocol.swift */,
 				8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */,
 				8E9FBDB11E7FA812001B87BA /* LoginModel.swift */,
+				8E9FBDBB1E8038DF001B87BA /* UserPofile.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -217,6 +233,7 @@
 				TargetAttributes = {
 					8E09B6E61E7BD3C700009BC4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -308,13 +325,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
+				8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */,
 				8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */,
+				8E9FBDBA1E8035CC001B87BA /* Model.m in Sources */,
 				8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */,
 				8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */,
 				8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */,
+				8E9FBDBC1E8038DF001B87BA /* UserPofile.swift in Sources */,
 				8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */,
 				8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */,
 				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
+				8E9FBDBE1E8041EC001B87BA /* MainLeftController.swift in Sources */,
 				8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
 			);
@@ -429,12 +450,15 @@
 			baseConfigurationReference = 63292AE3F821849537F39D54 /* Pods-MacOs-YunIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "MacOs-YunIM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hui.MacOs-YunIM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacOs-YunIM/MacOs-YunIM-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,12 +468,14 @@
 			baseConfigurationReference = 020E92223CAE9C3671289CFD /* Pods-MacOs-YunIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "MacOs-YunIM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hui.MacOs-YunIM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacOs-YunIM/MacOs-YunIM-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

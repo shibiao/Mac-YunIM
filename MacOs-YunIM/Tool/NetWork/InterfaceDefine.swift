@@ -8,10 +8,13 @@
 
 import Cocoa
 
-//MARK: 接口
-public let ApiLogin = "ApiLogin"
+//MARK: url
+public let BaseUrl = "http://iter.yunwoke.com/api/"
 
-let app : AppDelegate =  (NSApplication.shared().delegate as! AppDelegate)
+//MARK: 接口
+public let ApiLogin = "v2/user/signin"
+public let ApiUserPofile = "v2/user/profile"
+
 
 
 
@@ -19,3 +22,19 @@ let app : AppDelegate =  (NSApplication.shared().delegate as! AppDelegate)
 
 
 //MARK: 常量
+let app : AppDelegate =  (NSApplication.shared().delegate as! AppDelegate)
+
+
+
+
+
+
+
+extension String {
+    var token : String {
+        return BaseUrl + self + "?session_token=" + LoginModel.session_token
+    }
+    var noneToken: String {
+        return BaseUrl + self
+    }
+}
