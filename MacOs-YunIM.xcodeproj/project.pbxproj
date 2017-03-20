@@ -19,6 +19,7 @@
 		8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */; };
 		8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */; };
 		8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */; };
+		8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDefine.swift; sourceTree = "<group>"; };
 		8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainWindowController.storyboard; sourceTree = "<group>"; };
 		8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRequest.swift; sourceTree = "<group>"; };
 		EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOs_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */,
+				8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */,
 				8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */,
+				8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */,
 				8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */,
 				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
