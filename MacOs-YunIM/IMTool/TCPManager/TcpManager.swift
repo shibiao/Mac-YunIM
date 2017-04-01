@@ -15,6 +15,7 @@ class TcpManager :NSObject, StreamDelegate {
     var outputStream    :   OutputStream?
     var receiveLock     :   NSLock?          = NSLock()
     var sendLock        :   NSLock?          = NSLock()
+    var receiveBuffer   = NSMutableData()
     //MARK: 创建socket链接
     func connect(_ ip: String ,_ port: Int32,_ status: Int = 1) {
         Stream.stream(ip, port, input: &inputStream, output: &outputStream)
@@ -50,6 +51,22 @@ class TcpManager :NSObject, StreamDelegate {
             break
         default: break
             
+        }
+    }
+    func receiveData(){
+        var buffer = [UInt8](repeating: 0, count: 1024)
+        let len = inputStream?.read(&buffer, maxLength: buffer.count)
+        if let len = len {
+            if len > 0 {
+                receiveLock?.lock()
+                receiveBuffer.append(buffer, length: len)
+                while buffer.count >= 16 {
+                    var range = NSRange(location: 0, length: 16)
+                    let headerData = receiveBuffer.subdata(with: range)
+                    let inputData = DataInputStream(headerData as NSData)
+                    
+                }
+            }
         }
     }
 }
