@@ -50,6 +50,7 @@
 		8E8F7A8B1E8FADA900B061E4 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A661E8FADA900B061E4 /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E8F7A8C1E8FADA900B061E4 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A691E8FADA900B061E4 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E8F7A8D1E8FADA900B061E4 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */; };
 		8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */; };
 		8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */; };
 		8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */; };
@@ -155,6 +156,7 @@
 		8E8F7A6A1E8FADA900B061E4 /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBWireFormat.h; sourceTree = "<group>"; };
 		8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWireFormat.m; sourceTree = "<group>"; };
 		8E8F7A6C1E8FADA900B061E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpManager.swift; sourceTree = "<group>"; };
 		8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainWindowController.storyboard; sourceTree = "<group>"; };
 		8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRequest.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		8E8F7A1C1E8FAD1200B061E4 /* IMTool */ = {
 			isa = PBXGroup;
 			children = (
+				8E8F7A8F1E8FB37200B061E4 /* TCPManager */,
 				8E8F7A1D1E8FADA800B061E4 /* Protobuf */,
 			);
 			path = IMTool;
@@ -397,6 +400,14 @@
 				8E8F7A411E8FADA900B061E4 /* Wrappers.pbobjc.m */,
 			);
 			path = protobuf;
+			sourceTree = "<group>";
+		};
+		8E8F7A8F1E8FB37200B061E4 /* TCPManager */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */,
+			);
+			path = TCPManager;
 			sourceTree = "<group>";
 		};
 		8E9FBD831E7EDEE6001B87BA /* IMMain */ = {
@@ -608,6 +619,7 @@
 				8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */,
 				8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */,
 				8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */,
+				8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
