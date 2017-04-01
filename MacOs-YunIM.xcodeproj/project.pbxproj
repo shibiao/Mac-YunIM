@@ -52,6 +52,7 @@
 		8E8F7A8D1E8FADA900B061E4 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */; };
 		8E8F7A931E900C3E00B061E4 /* DataInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A921E900C3E00B061E4 /* DataInputStream.swift */; };
+		8E8F7A951E90157300B061E4 /* SwiftKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A941E90157300B061E4 /* SwiftKit.swift */; };
 		8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */; };
 		8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */; };
 		8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */; };
@@ -159,6 +160,7 @@
 		8E8F7A6C1E8FADA900B061E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpManager.swift; sourceTree = "<group>"; };
 		8E8F7A921E900C3E00B061E4 /* DataInputStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInputStream.swift; sourceTree = "<group>"; };
+		8E8F7A941E90157300B061E4 /* SwiftKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKit.swift; sourceTree = "<group>"; };
 		8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainWindowController.storyboard; sourceTree = "<group>"; };
 		8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRequest.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		8E203A2F1E7CDD5A00AABB87 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8E8F7A941E90157300B061E4 /* SwiftKit.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */,
 				8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */,
 				8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */,
+				8E8F7A951E90157300B061E4 /* SwiftKit.swift in Sources */,
 				8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

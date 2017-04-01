@@ -64,9 +64,29 @@ class TcpManager :NSObject, StreamDelegate {
                     var range = NSRange(location: 0, length: 16)
                     let headerData = receiveBuffer.subdata(with: range)
                     let inputData = DataInputStream(headerData as NSData)
+                    let dataLen = inputData.readInt()
+                    if dataLen > Int32(receiveBuffer.length) {
+                        //如果协议头里面包长大于buffer长度 说明数据还没有接收完
+                        break
+                    }
+                    _               = inputData.readShort()
+                    _               = inputData.readShort()
+                    let serviceId   = inputData.readShort()
+                    let commandId   = inputData.readShort()
+                    let reserved    = inputData.readShort()
+                    _               = inputData.readShort()
+                    SLog("收到信息 服务id=\(serviceId) 命令id=\(commandId) 序列号=\(reserved)")
+                    range = NSRange(location: 16, length: dataLen - 16)
+                    let loadData = receiveBuffer.subdata(with: range)
+                    let remainLen = receiveBuffer.length - dataLen
+                    range = NSRange(location: dataLen, length: remainLen)
+                    let remainData = receiveBuffer.subdata(with: range)
+                    receiveBuffer.setData(remainData)
                     
                 }
             }
+        } else {
+            SLog("没有数据")
         }
     }
 }
