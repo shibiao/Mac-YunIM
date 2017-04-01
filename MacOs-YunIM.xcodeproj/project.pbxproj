@@ -17,6 +17,39 @@
 		8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */; };
 		8E09B7031E7BD3EF00009BC4 /* LoginBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */; };
 		8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */; };
+		8E8F7A6D1E8FADA900B061E4 /* IM.BaseDefine.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */; };
+		8E8F7A6E1E8FADA900B061E4 /* IM.Login.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */; };
+		8E8F7A6F1E8FADA900B061E4 /* IM.Message.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A201E8FADA800B061E4 /* IM.Message.proto */; };
+		8E8F7A701E8FADA900B061E4 /* IM.Other.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A211E8FADA800B061E4 /* IM.Other.proto */; };
+		8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A231E8FADA800B061E4 /* ImBaseDefine.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A251E8FADA800B061E4 /* ImLogin.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A731E8FADA900B061E4 /* ImMessage.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A271E8FADA800B061E4 /* ImMessage.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A741E8FADA900B061E4 /* ImOther.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A291E8FADA900B061E4 /* ImOther.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A751E8FADA900B061E4 /* generate_well_known_types.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A2B1E8FADA900B061E4 /* generate_well_known_types.sh */; };
+		8E8F7A761E8FADA900B061E4 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A2F1E8FADA900B061E4 /* Any.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A771E8FADA900B061E4 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A311E8FADA900B061E4 /* Api.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A781E8FADA900B061E4 /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A331E8FADA900B061E4 /* Duration.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A791E8FADA900B061E4 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A351E8FADA900B061E4 /* Empty.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7A1E8FADA900B061E4 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A371E8FADA900B061E4 /* FieldMask.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A391E8FADA900B061E4 /* SourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7C1E8FADA900B061E4 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A3B1E8FADA900B061E4 /* Struct.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7D1E8FADA900B061E4 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A3D1E8FADA900B061E4 /* Timestamp.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7E1E8FADA900B061E4 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A3F1E8FADA900B061E4 /* Type.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A7F1E8FADA900B061E4 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A411E8FADA900B061E4 /* Wrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A801E8FADA900B061E4 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A431E8FADA900B061E4 /* GPBArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A811E8FADA900B061E4 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A471E8FADA900B061E4 /* GPBCodedInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A821E8FADA900B061E4 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A4A1E8FADA900B061E4 /* GPBCodedOutputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A831E8FADA900B061E4 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A4D1E8FADA900B061E4 /* GPBDescriptor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A841E8FADA900B061E4 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A501E8FADA900B061E4 /* GPBDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A851E8FADA900B061E4 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A531E8FADA900B061E4 /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A861E8FADA900B061E4 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A551E8FADA900B061E4 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A871E8FADA900B061E4 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A571E8FADA900B061E4 /* GPBMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A881E8FADA900B061E4 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A5C1E8FADA900B061E4 /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A891E8FADA900B061E4 /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A601E8FADA900B061E4 /* GPBUnknownField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A8A1E8FADA900B061E4 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A631E8FADA900B061E4 /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A8B1E8FADA900B061E4 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A661E8FADA900B061E4 /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A8C1E8FADA900B061E4 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A691E8FADA900B061E4 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E8F7A8D1E8FADA900B061E4 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */; };
 		8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */; };
 		8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */; };
@@ -46,6 +79,82 @@
 		8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBottomView.swift; sourceTree = "<group>"; };
 		8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginBottomView.xib; sourceTree = "<group>"; };
 		8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDefine.swift; sourceTree = "<group>"; };
+		8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.BaseDefine.proto; sourceTree = "<group>"; };
+		8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Login.proto; sourceTree = "<group>"; };
+		8E8F7A201E8FADA800B061E4 /* IM.Message.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Message.proto; sourceTree = "<group>"; };
+		8E8F7A211E8FADA800B061E4 /* IM.Other.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Other.proto; sourceTree = "<group>"; };
+		8E8F7A221E8FADA800B061E4 /* ImBaseDefine.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImBaseDefine.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A231E8FADA800B061E4 /* ImBaseDefine.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImBaseDefine.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A241E8FADA800B061E4 /* ImLogin.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImLogin.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A251E8FADA800B061E4 /* ImLogin.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImLogin.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A261E8FADA800B061E4 /* ImMessage.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImMessage.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A271E8FADA800B061E4 /* ImMessage.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImMessage.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A281E8FADA900B061E4 /* ImOther.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImOther.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A291E8FADA900B061E4 /* ImOther.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImOther.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A2B1E8FADA900B061E4 /* generate_well_known_types.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_well_known_types.sh; sourceTree = "<group>"; };
+		8E8F7A2E1E8FADA900B061E4 /* Any.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Any.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A2F1E8FADA900B061E4 /* Any.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Any.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A301E8FADA900B061E4 /* Api.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A311E8FADA900B061E4 /* Api.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A321E8FADA900B061E4 /* Duration.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duration.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A331E8FADA900B061E4 /* Duration.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duration.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A341E8FADA900B061E4 /* Empty.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empty.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A351E8FADA900B061E4 /* Empty.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A361E8FADA900B061E4 /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldMask.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A371E8FADA900B061E4 /* FieldMask.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldMask.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A381E8FADA900B061E4 /* SourceContext.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceContext.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A391E8FADA900B061E4 /* SourceContext.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceContext.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A3A1E8FADA900B061E4 /* Struct.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Struct.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A3B1E8FADA900B061E4 /* Struct.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Struct.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A3C1E8FADA900B061E4 /* Timestamp.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A3D1E8FADA900B061E4 /* Timestamp.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timestamp.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A3E1E8FADA900B061E4 /* Type.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A3F1E8FADA900B061E4 /* Type.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A401E8FADA900B061E4 /* Wrappers.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wrappers.pbobjc.h; sourceTree = "<group>"; };
+		8E8F7A411E8FADA900B061E4 /* Wrappers.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wrappers.pbobjc.m; sourceTree = "<group>"; };
+		8E8F7A421E8FADA900B061E4 /* GPBArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBArray.h; sourceTree = "<group>"; };
+		8E8F7A431E8FADA900B061E4 /* GPBArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBArray.m; sourceTree = "<group>"; };
+		8E8F7A441E8FADA900B061E4 /* GPBArray_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBArray_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A451E8FADA900B061E4 /* GPBBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBBootstrap.h; sourceTree = "<group>"; };
+		8E8F7A461E8FADA900B061E4 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream.h; sourceTree = "<group>"; };
+		8E8F7A471E8FADA900B061E4 /* GPBCodedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBCodedInputStream.m; sourceTree = "<group>"; };
+		8E8F7A481E8FADA900B061E4 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A491E8FADA900B061E4 /* GPBCodedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBCodedOutputStream.h; sourceTree = "<group>"; };
+		8E8F7A4A1E8FADA900B061E4 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBCodedOutputStream.m; sourceTree = "<group>"; };
+		8E8F7A4B1E8FADA900B061E4 /* GPBCodedOutputStream_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBCodedOutputStream_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A4C1E8FADA900B061E4 /* GPBDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor.h; sourceTree = "<group>"; };
+		8E8F7A4D1E8FADA900B061E4 /* GPBDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBDescriptor.m; sourceTree = "<group>"; };
+		8E8F7A4E1E8FADA900B061E4 /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A4F1E8FADA900B061E4 /* GPBDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBDictionary.h; sourceTree = "<group>"; };
+		8E8F7A501E8FADA900B061E4 /* GPBDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBDictionary.m; sourceTree = "<group>"; };
+		8E8F7A511E8FADA900B061E4 /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A521E8FADA900B061E4 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionInternals.h; sourceTree = "<group>"; };
+		8E8F7A531E8FADA900B061E4 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionInternals.m; sourceTree = "<group>"; };
+		8E8F7A541E8FADA900B061E4 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionRegistry.h; sourceTree = "<group>"; };
+		8E8F7A551E8FADA900B061E4 /* GPBExtensionRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionRegistry.m; sourceTree = "<group>"; };
+		8E8F7A561E8FADA900B061E4 /* GPBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBMessage.h; sourceTree = "<group>"; };
+		8E8F7A571E8FADA900B061E4 /* GPBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBMessage.m; sourceTree = "<group>"; };
+		8E8F7A581E8FADA900B061E4 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A591E8FADA900B061E4 /* GPBProtocolBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBProtocolBuffers.h; sourceTree = "<group>"; };
+		8E8F7A5A1E8FADA900B061E4 /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
+		8E8F7A5B1E8FADA900B061E4 /* GPBRootObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBRootObject.h; sourceTree = "<group>"; };
+		8E8F7A5C1E8FADA900B061E4 /* GPBRootObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBRootObject.m; sourceTree = "<group>"; };
+		8E8F7A5D1E8FADA900B061E4 /* GPBRootObject_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBRootObject_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A5E1E8FADA900B061E4 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBRuntimeTypes.h; sourceTree = "<group>"; };
+		8E8F7A5F1E8FADA900B061E4 /* GPBUnknownField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUnknownField.h; sourceTree = "<group>"; };
+		8E8F7A601E8FADA900B061E4 /* GPBUnknownField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBUnknownField.m; sourceTree = "<group>"; };
+		8E8F7A611E8FADA900B061E4 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A621E8FADA900B061E4 /* GPBUnknownFieldSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUnknownFieldSet.h; sourceTree = "<group>"; };
+		8E8F7A631E8FADA900B061E4 /* GPBUnknownFieldSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBUnknownFieldSet.m; sourceTree = "<group>"; };
+		8E8F7A641E8FADA900B061E4 /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A651E8FADA900B061E4 /* GPBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUtilities.h; sourceTree = "<group>"; };
+		8E8F7A661E8FADA900B061E4 /* GPBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBUtilities.m; sourceTree = "<group>"; };
+		8E8F7A671E8FADA900B061E4 /* GPBUtilities_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBUtilities_PackagePrivate.h; sourceTree = "<group>"; };
+		8E8F7A681E8FADA900B061E4 /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBWellKnownTypes.h; sourceTree = "<group>"; };
+		8E8F7A691E8FADA900B061E4 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWellKnownTypes.m; sourceTree = "<group>"; };
+		8E8F7A6A1E8FADA900B061E4 /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBWireFormat.h; sourceTree = "<group>"; };
+		8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWireFormat.m; sourceTree = "<group>"; };
+		8E8F7A6C1E8FADA900B061E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E9FBD841E7EDEE6001B87BA /* MainWindowController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainWindowController.storyboard; sourceTree = "<group>"; };
 		8E9FBD851E7EDEE6001B87BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRequest.swift; sourceTree = "<group>"; };
@@ -111,6 +220,7 @@
 				8E9FBDB91E8035CC001B87BA /* Model.m */,
 				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E9FBD831E7EDEE6001B87BA /* IMMain */,
+				8E8F7A1C1E8FAD1200B061E4 /* IMTool */,
 				8E203A2E1E7CDD5A00AABB87 /* Tool */,
 				8E09B6EC1E7BD3C700009BC4 /* Assets.xcassets */,
 				8E09B6EE1E7BD3C700009BC4 /* MainMenu.xib */,
@@ -172,6 +282,121 @@
 				8E9FBDAC1E7F8F9A001B87BA /* NHRequest.swift */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		8E8F7A1C1E8FAD1200B061E4 /* IMTool */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A1D1E8FADA800B061E4 /* Protobuf */,
+			);
+			path = IMTool;
+			sourceTree = "<group>";
+		};
+		8E8F7A1D1E8FADA800B061E4 /* Protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */,
+				8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */,
+				8E8F7A201E8FADA800B061E4 /* IM.Message.proto */,
+				8E8F7A211E8FADA800B061E4 /* IM.Other.proto */,
+				8E8F7A221E8FADA800B061E4 /* ImBaseDefine.pbobjc.h */,
+				8E8F7A231E8FADA800B061E4 /* ImBaseDefine.pbobjc.m */,
+				8E8F7A241E8FADA800B061E4 /* ImLogin.pbobjc.h */,
+				8E8F7A251E8FADA800B061E4 /* ImLogin.pbobjc.m */,
+				8E8F7A261E8FADA800B061E4 /* ImMessage.pbobjc.h */,
+				8E8F7A271E8FADA800B061E4 /* ImMessage.pbobjc.m */,
+				8E8F7A281E8FADA900B061E4 /* ImOther.pbobjc.h */,
+				8E8F7A291E8FADA900B061E4 /* ImOther.pbobjc.m */,
+				8E8F7A2A1E8FADA900B061E4 /* objectivec */,
+			);
+			path = Protobuf;
+			sourceTree = "<group>";
+		};
+		8E8F7A2A1E8FADA900B061E4 /* objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A2B1E8FADA900B061E4 /* generate_well_known_types.sh */,
+				8E8F7A2C1E8FADA900B061E4 /* google */,
+				8E8F7A421E8FADA900B061E4 /* GPBArray.h */,
+				8E8F7A431E8FADA900B061E4 /* GPBArray.m */,
+				8E8F7A441E8FADA900B061E4 /* GPBArray_PackagePrivate.h */,
+				8E8F7A451E8FADA900B061E4 /* GPBBootstrap.h */,
+				8E8F7A461E8FADA900B061E4 /* GPBCodedInputStream.h */,
+				8E8F7A471E8FADA900B061E4 /* GPBCodedInputStream.m */,
+				8E8F7A481E8FADA900B061E4 /* GPBCodedInputStream_PackagePrivate.h */,
+				8E8F7A491E8FADA900B061E4 /* GPBCodedOutputStream.h */,
+				8E8F7A4A1E8FADA900B061E4 /* GPBCodedOutputStream.m */,
+				8E8F7A4B1E8FADA900B061E4 /* GPBCodedOutputStream_PackagePrivate.h */,
+				8E8F7A4C1E8FADA900B061E4 /* GPBDescriptor.h */,
+				8E8F7A4D1E8FADA900B061E4 /* GPBDescriptor.m */,
+				8E8F7A4E1E8FADA900B061E4 /* GPBDescriptor_PackagePrivate.h */,
+				8E8F7A4F1E8FADA900B061E4 /* GPBDictionary.h */,
+				8E8F7A501E8FADA900B061E4 /* GPBDictionary.m */,
+				8E8F7A511E8FADA900B061E4 /* GPBDictionary_PackagePrivate.h */,
+				8E8F7A521E8FADA900B061E4 /* GPBExtensionInternals.h */,
+				8E8F7A531E8FADA900B061E4 /* GPBExtensionInternals.m */,
+				8E8F7A541E8FADA900B061E4 /* GPBExtensionRegistry.h */,
+				8E8F7A551E8FADA900B061E4 /* GPBExtensionRegistry.m */,
+				8E8F7A561E8FADA900B061E4 /* GPBMessage.h */,
+				8E8F7A571E8FADA900B061E4 /* GPBMessage.m */,
+				8E8F7A581E8FADA900B061E4 /* GPBMessage_PackagePrivate.h */,
+				8E8F7A591E8FADA900B061E4 /* GPBProtocolBuffers.h */,
+				8E8F7A5A1E8FADA900B061E4 /* GPBProtocolBuffers_RuntimeSupport.h */,
+				8E8F7A5B1E8FADA900B061E4 /* GPBRootObject.h */,
+				8E8F7A5C1E8FADA900B061E4 /* GPBRootObject.m */,
+				8E8F7A5D1E8FADA900B061E4 /* GPBRootObject_PackagePrivate.h */,
+				8E8F7A5E1E8FADA900B061E4 /* GPBRuntimeTypes.h */,
+				8E8F7A5F1E8FADA900B061E4 /* GPBUnknownField.h */,
+				8E8F7A601E8FADA900B061E4 /* GPBUnknownField.m */,
+				8E8F7A611E8FADA900B061E4 /* GPBUnknownField_PackagePrivate.h */,
+				8E8F7A621E8FADA900B061E4 /* GPBUnknownFieldSet.h */,
+				8E8F7A631E8FADA900B061E4 /* GPBUnknownFieldSet.m */,
+				8E8F7A641E8FADA900B061E4 /* GPBUnknownFieldSet_PackagePrivate.h */,
+				8E8F7A651E8FADA900B061E4 /* GPBUtilities.h */,
+				8E8F7A661E8FADA900B061E4 /* GPBUtilities.m */,
+				8E8F7A671E8FADA900B061E4 /* GPBUtilities_PackagePrivate.h */,
+				8E8F7A681E8FADA900B061E4 /* GPBWellKnownTypes.h */,
+				8E8F7A691E8FADA900B061E4 /* GPBWellKnownTypes.m */,
+				8E8F7A6A1E8FADA900B061E4 /* GPBWireFormat.h */,
+				8E8F7A6B1E8FADA900B061E4 /* GPBWireFormat.m */,
+				8E8F7A6C1E8FADA900B061E4 /* README.md */,
+			);
+			path = objectivec;
+			sourceTree = "<group>";
+		};
+		8E8F7A2C1E8FADA900B061E4 /* google */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A2D1E8FADA900B061E4 /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		8E8F7A2D1E8FADA900B061E4 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				8E8F7A2E1E8FADA900B061E4 /* Any.pbobjc.h */,
+				8E8F7A2F1E8FADA900B061E4 /* Any.pbobjc.m */,
+				8E8F7A301E8FADA900B061E4 /* Api.pbobjc.h */,
+				8E8F7A311E8FADA900B061E4 /* Api.pbobjc.m */,
+				8E8F7A321E8FADA900B061E4 /* Duration.pbobjc.h */,
+				8E8F7A331E8FADA900B061E4 /* Duration.pbobjc.m */,
+				8E8F7A341E8FADA900B061E4 /* Empty.pbobjc.h */,
+				8E8F7A351E8FADA900B061E4 /* Empty.pbobjc.m */,
+				8E8F7A361E8FADA900B061E4 /* FieldMask.pbobjc.h */,
+				8E8F7A371E8FADA900B061E4 /* FieldMask.pbobjc.m */,
+				8E8F7A381E8FADA900B061E4 /* SourceContext.pbobjc.h */,
+				8E8F7A391E8FADA900B061E4 /* SourceContext.pbobjc.m */,
+				8E8F7A3A1E8FADA900B061E4 /* Struct.pbobjc.h */,
+				8E8F7A3B1E8FADA900B061E4 /* Struct.pbobjc.m */,
+				8E8F7A3C1E8FADA900B061E4 /* Timestamp.pbobjc.h */,
+				8E8F7A3D1E8FADA900B061E4 /* Timestamp.pbobjc.m */,
+				8E8F7A3E1E8FADA900B061E4 /* Type.pbobjc.h */,
+				8E8F7A3F1E8FADA900B061E4 /* Type.pbobjc.m */,
+				8E8F7A401E8FADA900B061E4 /* Wrappers.pbobjc.h */,
+				8E8F7A411E8FADA900B061E4 /* Wrappers.pbobjc.m */,
+			);
+			path = protobuf;
 			sourceTree = "<group>";
 		};
 		8E9FBD831E7EDEE6001B87BA /* IMMain */ = {
@@ -270,10 +495,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8F7A6D1E8FADA900B061E4 /* IM.BaseDefine.proto in Resources */,
 				8EEA36DF1E80591C0098438D /* MainSessionItem.xib in Resources */,
 				8E09B6ED1E7BD3C700009BC4 /* Assets.xcassets in Resources */,
+				8E8F7A6F1E8FADA900B061E4 /* IM.Message.proto in Resources */,
 				8E09B7031E7BD3EF00009BC4 /* LoginBottomView.xib in Resources */,
 				8E09B6F01E7BD3C700009BC4 /* MainMenu.xib in Resources */,
+				8E8F7A701E8FADA900B061E4 /* IM.Other.proto in Resources */,
+				8E8F7A751E8FADA900B061E4 /* generate_well_known_types.sh in Resources */,
+				8E8F7A6E1E8FADA900B061E4 /* IM.Login.proto in Resources */,
 				8E9FBD861E7EDEE6001B87BA /* MainWindowController.storyboard in Resources */,
 				8E09B7011E7BD3EF00009BC4 /* NHLoginWindowController.xib in Resources */,
 			);
@@ -334,22 +564,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8F7A841E8FADA900B061E4 /* GPBDictionary.m in Sources */,
+				8E8F7A891E8FADA900B061E4 /* GPBUnknownField.m in Sources */,
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */,
+				8E8F7A7F1E8FADA900B061E4 /* Wrappers.pbobjc.m in Sources */,
+				8E8F7A761E8FADA900B061E4 /* Any.pbobjc.m in Sources */,
+				8E8F7A871E8FADA900B061E4 /* GPBMessage.m in Sources */,
+				8E8F7A811E8FADA900B061E4 /* GPBCodedInputStream.m in Sources */,
 				8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */,
+				8E8F7A7A1E8FADA900B061E4 /* FieldMask.pbobjc.m in Sources */,
+				8E8F7A851E8FADA900B061E4 /* GPBExtensionInternals.m in Sources */,
 				8E9FBDBA1E8035CC001B87BA /* Model.m in Sources */,
+				8E8F7A731E8FADA900B061E4 /* ImMessage.pbobjc.m in Sources */,
+				8E8F7A821E8FADA900B061E4 /* GPBCodedOutputStream.m in Sources */,
+				8E8F7A7D1E8FADA900B061E4 /* Timestamp.pbobjc.m in Sources */,
 				8E9FBD871E7EDEE6001B87BA /* MainWindowController.swift in Sources */,
 				8E9FBDAD1E7F8F9A001B87BA /* NHRequest.swift in Sources */,
+				8E8F7A781E8FADA900B061E4 /* Duration.pbobjc.m in Sources */,
 				8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */,
+				8E8F7A8D1E8FADA900B061E4 /* GPBWireFormat.m in Sources */,
 				8E9FBDC01E805684001B87BA /* MainSessionListController.swift in Sources */,
 				8EEA36DE1E80591C0098438D /* MainSessionItem.swift in Sources */,
+				8E8F7A771E8FADA900B061E4 /* Api.pbobjc.m in Sources */,
+				8E8F7A8C1E8FADA900B061E4 /* GPBWellKnownTypes.m in Sources */,
+				8E8F7A861E8FADA900B061E4 /* GPBExtensionRegistry.m in Sources */,
+				8E8F7A7C1E8FADA900B061E4 /* Struct.pbobjc.m in Sources */,
+				8E8F7A881E8FADA900B061E4 /* GPBRootObject.m in Sources */,
 				8E9FBDBC1E8038DF001B87BA /* UserPofile.swift in Sources */,
+				8E8F7A791E8FADA900B061E4 /* Empty.pbobjc.m in Sources */,
 				8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */,
+				8E8F7A7E1E8FADA900B061E4 /* Type.pbobjc.m in Sources */,
 				8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */,
+				8E8F7A8B1E8FADA900B061E4 /* GPBUtilities.m in Sources */,
+				8E8F7A741E8FADA900B061E4 /* ImOther.pbobjc.m in Sources */,
 				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
 				8E9FBDBE1E8041EC001B87BA /* MainLeftController.swift in Sources */,
 				8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */,
+				8E8F7A801E8FADA900B061E4 /* GPBArray.m in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
+				8E8F7A8A1E8FADA900B061E4 /* GPBUnknownFieldSet.m in Sources */,
+				8E8F7A831E8FADA900B061E4 /* GPBDescriptor.m in Sources */,
+				8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */,
+				8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */,
+				8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
