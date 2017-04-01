@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainSessionItem" customModule="MacOs_YunIM" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZYg-H5-ekw">
+                    <rect key="frame" x="0.0" y="1" width="480" height="49"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-BD-R4V">
+                            <rect key="frame" x="20" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="bWr-dB-1rY"/>
+                                <constraint firstAttribute="height" constant="50" id="ptA-zx-Ray"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_0959" id="e9F-PK-Qil"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IjJ-BD-R4V" firstAttribute="centerY" secondItem="ZYg-H5-ekw" secondAttribute="centerY" id="DO2-Cx-6eh"/>
+                        <constraint firstItem="IjJ-BD-R4V" firstAttribute="leading" secondItem="ZYg-H5-ekw" secondAttribute="leading" constant="20" id="GRU-Op-xZe"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ZYg-H5-ekw" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="1yL-EQ-NkL"/>
+                <constraint firstAttribute="bottom" secondItem="ZYg-H5-ekw" secondAttribute="bottom" constant="1" id="9fK-L3-nyT"/>
+                <constraint firstAttribute="trailing" secondItem="ZYg-H5-ekw" secondAttribute="trailing" id="DlN-tW-BLI"/>
+                <constraint firstItem="ZYg-H5-ekw" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="gBR-5N-irh"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="81"/>
+        </customView>
+        <customObject id="e4u-3A-MfY" customClass="MainSessionItem" customModule="MacOs_YunIM" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="IMG_0959" width="750" height="728"/>
+    </resources>
+</document>

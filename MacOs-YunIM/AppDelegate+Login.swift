@@ -20,6 +20,7 @@ extension AppDelegate {
     }
     
     func showMainWindowController() {
+        mainWindow.window?.close()
         let main = NSStoryboard.init(name: "MainWindowController", bundle: nil).instantiateInitialController() as!  MainWindowController
         main.showWindow(nil)
         main.window?.makeKeyAndOrderFront(nil)

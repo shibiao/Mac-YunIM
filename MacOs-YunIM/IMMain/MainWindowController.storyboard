@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ANV-kp-z8q">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -338,9 +339,9 @@
         <!--CenterView-->
         <scene sceneID="hte-7l-csW">
             <objects>
-                <viewController title="CenterView" id="Phr-az-p7u" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="blX-BD-7lz">
-                        <rect key="frame" x="0.0" y="0.0" width="203" height="416"/>
+                <viewController title="CenterView" id="Phr-az-p7u" customClass="MainSessionListController" customModule="MacOs_YunIM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="blX-BD-7lz">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="27" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Hd-wwf">
@@ -383,13 +384,46 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="699-hc-MGS">
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                <clipView key="contentView" drawsBackground="NO" id="INX-ND-h6D">
+                                    <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="hWV-sW-aSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="TPs-6d-Pyb">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="eig-Mo-5ig">
+                                    <rect key="frame" x="1" y="350" width="197" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gyF-av-uRg">
+                                    <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aeM-Hd-wwf" firstAttribute="leading" secondItem="blX-BD-7lz" secondAttribute="leading" constant="16" id="39b-Pz-bRF"/>
                             <constraint firstItem="aeM-Hd-wwf" firstAttribute="top" secondItem="blX-BD-7lz" secondAttribute="top" constant="11.5" id="7aB-JE-kBU"/>
+                            <constraint firstItem="699-hc-MGS" firstAttribute="top" secondItem="aeM-Hd-wwf" secondAttribute="bottom" constant="15" id="D39-kM-CgI"/>
+                            <constraint firstItem="699-hc-MGS" firstAttribute="leading" secondItem="blX-BD-7lz" secondAttribute="leading" id="EDp-Qc-eiI"/>
+                            <constraint firstAttribute="trailing" secondItem="699-hc-MGS" secondAttribute="trailing" id="LlM-MW-RRf"/>
+                            <constraint firstAttribute="bottom" secondItem="699-hc-MGS" secondAttribute="bottom" id="VzX-uO-fDp"/>
                             <constraint firstAttribute="trailing" secondItem="aeM-Hd-wwf" secondAttribute="trailing" constant="16" id="Ytm-AF-Gck"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="hWV-sW-aSr" id="uax-R9-i3F"/>
+                    </connections>
                 </viewController>
                 <customObject id="xNU-ca-Akc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

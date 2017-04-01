@@ -32,7 +32,9 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
         window?.isMovableByWindowBackground = true
         //消除 编辑时 系统自带的边框效果
         PhoneTextFT.focusRingType = .none;
+        PhoneTextFT.stringValue = "18513989391"
         passWordTF.focusRingType  = .none;
+        passWordTF.stringValue = "123123"
         PhoneTextFT.delegate = self;
         passWordTF.delegate = self;
         btn.target = self
