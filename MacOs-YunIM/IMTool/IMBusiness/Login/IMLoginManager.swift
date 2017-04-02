@@ -8,6 +8,8 @@
 
 import Cocoa
 
-class IMLoginManager: NSObject {
-
+struct IMLoginManager: IMloginProtocol {
+    
+    
+    
 }

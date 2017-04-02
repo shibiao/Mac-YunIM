@@ -92,7 +92,7 @@ class TcpManager :NSObject, StreamDelegate {
             SLog("没有数据")
         }
     }
-    
+    //MARK: 发送数据
     func send(_ data: NSData) {
         
     }

@@ -8,6 +8,18 @@
 
 import Cocoa
 
-class IMChatMob: NSObject {
-
+struct IMChatMob {
+    
+    static let share = IMChatMob()
+    //MARK: 登陆模块
+    private var imlogin : IMloginProtocol
+    var imLoginManager : IMloginProtocol {
+        get {
+            return imlogin
+        }
+    }
+    
+    init() {
+        imlogin = IMLoginManager()
+    }
 }
