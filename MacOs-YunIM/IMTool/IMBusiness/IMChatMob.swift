@@ -18,8 +18,14 @@ struct IMChatMob {
             return imlogin
         }
     }
-    
     init() {
+        //模块初始化
         imlogin = IMLoginManager()
+        
+        //注册收到消息
+        registerReceiveMessage()
+    }
+    func registerReceiveMessage(){
+        
     }
 }

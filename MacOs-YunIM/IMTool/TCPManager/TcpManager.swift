@@ -15,7 +15,9 @@ class TcpManager :NSObject, StreamDelegate {
     var outputStream    :   OutputStream?
     var receiveLock     :   NSLock?          = NSLock()
     var sendLock        :   NSLock?          = NSLock()
-    var receiveBuffer   = NSMutableData()
+    //是否还有未发送的数据
+    var noSendData      :   Bool             = false
+    var receiveBuffer   =   NSMutableData()
     //MARK: 创建socket链接
     func connect(_ ip: String ,_ port: Int32,_ status: Int = 1) {
         Stream.stream(ip, port, input: &inputStream, output: &outputStream)
@@ -48,6 +50,7 @@ class TcpManager :NSObject, StreamDelegate {
         case Stream.Event.hasBytesAvailable://接受数据
             break
         case Stream.Event.hasSpaceAvailable://发送数据
+            hasSpaceAvailable(aStream)
             break
         default: break
             
@@ -85,7 +88,7 @@ class TcpManager :NSObject, StreamDelegate {
                     if loadData.length > 0 {
                         APIRouter.manager.receive(loadData, (Int(serviceId),Int(commandId),Int(reserved)))
                     }
-                    
+                    receiveLock?.unlock()
                 }
             }
         } else {
@@ -94,6 +97,26 @@ class TcpManager :NSObject, StreamDelegate {
     }
     //MARK: 发送数据
     func send(_ data: NSData) {
+        sendLock?.lock()
+        defer {
+            sendLock?.unlock()
+        }
+        if noSendData {//如果没有未发送的数据
+            let p = data.bytes.assumingMemoryBound(to: UInt8.self)
+            if let len = outputStream?.write(p, maxLength: data.length) , len < data.length {//如果写入的数据小于数据长度
+                
+            }
+            return
+        }
+    }
+    //MARK: 发送数据时的回调 处理发送后一些异常情况
+    private func hasSpaceAvailable(_ aStream: Stream) {
+        sendLock?.lock()
+        defer {
+            sendLock?.unlock()
+        }
+        
+        
         
     }
 }
