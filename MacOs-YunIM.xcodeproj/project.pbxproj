@@ -19,6 +19,9 @@
 		8E11BDB41E90C6420029A7EB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB31E90C6420029A7EB /* APIRouter.swift */; };
 		8E11BDB71E9107900029A7EB /* IMLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */; };
 		8E11BDB91E9107D70029A7EB /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */; };
+		8E11BDBC1E914F310029A7EB /* IMChatMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDBB1E914F310029A7EB /* IMChatMob.swift */; };
+		8E11BDBF1E914FBD0029A7EB /* IMloginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDBE1E914FBD0029A7EB /* IMloginProtocol.swift */; };
+		8E11BDC11E9150160029A7EB /* IMLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDC01E9150160029A7EB /* IMLoginManager.swift */; };
 		8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */; };
 		8E8F7A6D1E8FADA900B061E4 /* IM.BaseDefine.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */; };
 		8E8F7A6E1E8FADA900B061E4 /* IM.Login.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */; };
@@ -87,6 +90,9 @@
 		8E11BDB31E90C6420029A7EB /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMLoginAPI.swift; sourceTree = "<group>"; };
 		8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
+		8E11BDBB1E914F310029A7EB /* IMChatMob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMChatMob.swift; sourceTree = "<group>"; };
+		8E11BDBE1E914FBD0029A7EB /* IMloginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMloginProtocol.swift; sourceTree = "<group>"; };
+		8E11BDC01E9150160029A7EB /* IMLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMLoginManager.swift; sourceTree = "<group>"; };
 		8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDefine.swift; sourceTree = "<group>"; };
 		8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.BaseDefine.proto; sourceTree = "<group>"; };
 		8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Login.proto; sourceTree = "<group>"; };
@@ -279,6 +285,24 @@
 			path = BusinessAPI;
 			sourceTree = "<group>";
 		};
+		8E11BDBA1E914EF90029A7EB /* IMBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				8E11BDBD1E914FA50029A7EB /* Login */,
+				8E11BDBB1E914F310029A7EB /* IMChatMob.swift */,
+			);
+			path = IMBusiness;
+			sourceTree = "<group>";
+		};
+		8E11BDBD1E914FA50029A7EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8E11BDBE1E914FBD0029A7EB /* IMloginProtocol.swift */,
+				8E11BDC01E9150160029A7EB /* IMLoginManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		8E203A2E1E7CDD5A00AABB87 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,9 +333,10 @@
 		8E8F7A1C1E8FAD1200B061E4 /* IMTool */ = {
 			isa = PBXGroup;
 			children = (
-				8E11BDB51E9100E40029A7EB /* BusinessAPI */,
 				8E8F7A8F1E8FB37200B061E4 /* TCPManager */,
+				8E11BDB51E9100E40029A7EB /* BusinessAPI */,
 				8E8F7A1D1E8FADA800B061E4 /* Protobuf */,
+				8E11BDBA1E914EF90029A7EB /* IMBusiness */,
 			);
 			path = IMTool;
 			sourceTree = "<group>";
@@ -603,6 +628,7 @@
 				8E11BDB91E9107D70029A7EB /* ApiProtocol.swift in Sources */,
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */,
+				8E11BDC11E9150160029A7EB /* IMLoginManager.swift in Sources */,
 				8E11BDB71E9107900029A7EB /* IMLoginAPI.swift in Sources */,
 				8E8F7A7F1E8FADA900B061E4 /* Wrappers.pbobjc.m in Sources */,
 				8E8F7A761E8FADA900B061E4 /* Any.pbobjc.m in Sources */,
@@ -623,6 +649,7 @@
 				8E8F7A8D1E8FADA900B061E4 /* GPBWireFormat.m in Sources */,
 				8E9FBDC01E805684001B87BA /* MainSessionListController.swift in Sources */,
 				8EEA36DE1E80591C0098438D /* MainSessionItem.swift in Sources */,
+				8E11BDBF1E914FBD0029A7EB /* IMloginProtocol.swift in Sources */,
 				8E8F7A771E8FADA900B061E4 /* Api.pbobjc.m in Sources */,
 				8E8F7A8C1E8FADA900B061E4 /* GPBWellKnownTypes.m in Sources */,
 				8E8F7A861E8FADA900B061E4 /* GPBExtensionRegistry.m in Sources */,
@@ -646,6 +673,7 @@
 				8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */,
 				8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */,
 				8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */,
+				8E11BDBC1E914F310029A7EB /* IMChatMob.swift in Sources */,
 				8E8F7A951E90157300B061E4 /* SwiftKit.swift in Sources */,
 				8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */,
 			);
