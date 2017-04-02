@@ -8,6 +8,31 @@
 
 import Cocoa
 
-class IMLoginAPI: NSObject {
-
+struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
+    internal var callBack: (Any) -> ()
+    var seq : Int
+    //MARK: 数据返回时候包头
+    var responseHeader: apiHeader {
+        return (Int(ServiceID.sidLogin.rawValue),Int(LoginCmdID.cidLoginResUserlogin.rawValue),seq)
+    }
+    //MARK: 请求的时候包头
+    var requestHeader: apiHeader {
+        return (Int(ServiceID.sidLogin.rawValue),Int(LoginCmdID.cidLoginReqUserlogin.rawValue),seq)
+    }
+    //MARK: 收到数据时 处理数据
+    public func analysis(_ data: NSData) -> Any {
+        do {
+            let res = try IMLoginRes.parse(from: data as Data)
+            let resultCode  = res.errCode
+            let resultMsg   = res.errMsg
+            return ["resultCode": resultCode,"resultMsg": resultMsg ?? ""]
+        } catch _ {
+            return ["resultCode": 1         ,"resultMsg": "数据解析失败"]
+        }
+    }
+    //MARK: 发送数据时 处理数据
+    internal func package(_ data: Any) -> NSData? {
+        
+        return nil
+    }
 }

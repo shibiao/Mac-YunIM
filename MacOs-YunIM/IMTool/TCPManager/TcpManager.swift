@@ -77,17 +77,24 @@ class TcpManager :NSObject, StreamDelegate {
                     _               = inputData.readShort()
                     SLog("收到信息 服务id=\(serviceId) 命令id=\(commandId) 序列号=\(reserved)")
                     range = NSRange(location: 16, length: dataLen - 16)
-                    let loadData = receiveBuffer.subdata(with: range)
-                    let remainLen = receiveBuffer.length - dataLen
-                    range = NSRange(location: dataLen, length: remainLen)
+                    let loadData = receiveBuffer.subdata(with: range) as NSData
+                    let remainLen = Int32(receiveBuffer.length) - dataLen
+                    range = NSRange(location: Int(dataLen), length: Int(remainLen))
                     let remainData = receiveBuffer.subdata(with: range)
                     receiveBuffer.setData(remainData)
+                    if loadData.length > 0 {
+                        APIRouter.manager.receive(loadData, (Int(serviceId),Int(commandId),Int(reserved)))
+                    }
                     
                 }
             }
         } else {
             SLog("没有数据")
         }
+    }
+    
+    func send(_ data: NSData) {
+        
     }
 }
 extension Stream {

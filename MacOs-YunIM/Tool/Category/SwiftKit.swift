@@ -6,7 +6,8 @@
 //  Copyright © 2016年 CloudWork. All rights reserved.
 //
 
-import UIKit
+import Cocoa
+import CoreFoundation
 
 extension Int {
     func times(_ blcok: ()->()){
