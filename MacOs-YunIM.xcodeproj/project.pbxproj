@@ -16,6 +16,9 @@
 		8E09B7011E7BD3EF00009BC4 /* NHLoginWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6FC1E7BD3EF00009BC4 /* NHLoginWindowController.xib */; };
 		8E09B7021E7BD3EF00009BC4 /* LoginBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */; };
 		8E09B7031E7BD3EF00009BC4 /* LoginBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */; };
+		8E11BDB41E90C6420029A7EB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB31E90C6420029A7EB /* APIRouter.swift */; };
+		8E11BDB71E9107900029A7EB /* IMLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */; };
+		8E11BDB91E9107D70029A7EB /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */; };
 		8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */; };
 		8E8F7A6D1E8FADA900B061E4 /* IM.BaseDefine.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */; };
 		8E8F7A6E1E8FADA900B061E4 /* IM.Login.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */; };
@@ -81,6 +84,9 @@
 		8E09B6FC1E7BD3EF00009BC4 /* NHLoginWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHLoginWindowController.xib; sourceTree = "<group>"; };
 		8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBottomView.swift; sourceTree = "<group>"; };
 		8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginBottomView.xib; sourceTree = "<group>"; };
+		8E11BDB31E90C6420029A7EB /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMLoginAPI.swift; sourceTree = "<group>"; };
+		8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
 		8E203A311E7CDDE100AABB87 /* InterfaceDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDefine.swift; sourceTree = "<group>"; };
 		8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.BaseDefine.proto; sourceTree = "<group>"; };
 		8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Login.proto; sourceTree = "<group>"; };
@@ -264,6 +270,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8E11BDB51E9100E40029A7EB /* BusinessAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */,
+				8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */,
+			);
+			path = BusinessAPI;
+			sourceTree = "<group>";
+		};
 		8E203A2E1E7CDD5A00AABB87 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +309,7 @@
 		8E8F7A1C1E8FAD1200B061E4 /* IMTool */ = {
 			isa = PBXGroup;
 			children = (
+				8E11BDB51E9100E40029A7EB /* BusinessAPI */,
 				8E8F7A8F1E8FB37200B061E4 /* TCPManager */,
 				8E8F7A1D1E8FADA800B061E4 /* Protobuf */,
 			);
@@ -411,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */,
+				8E11BDB31E90C6420029A7EB /* APIRouter.swift */,
 				8E8F7A921E900C3E00B061E4 /* DataInputStream.swift */,
 			);
 			path = TCPManager;
@@ -583,8 +600,10 @@
 			files = (
 				8E8F7A841E8FADA900B061E4 /* GPBDictionary.m in Sources */,
 				8E8F7A891E8FADA900B061E4 /* GPBUnknownField.m in Sources */,
+				8E11BDB91E9107D70029A7EB /* ApiProtocol.swift in Sources */,
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */,
+				8E11BDB71E9107900029A7EB /* IMLoginAPI.swift in Sources */,
 				8E8F7A7F1E8FADA900B061E4 /* Wrappers.pbobjc.m in Sources */,
 				8E8F7A761E8FADA900B061E4 /* Any.pbobjc.m in Sources */,
 				8E8F7A871E8FADA900B061E4 /* GPBMessage.m in Sources */,
@@ -618,6 +637,7 @@
 				8E8F7A741E8FADA900B061E4 /* ImOther.pbobjc.m in Sources */,
 				8E203A321E7CDDE100AABB87 /* InterfaceDefine.swift in Sources */,
 				8E9FBDBE1E8041EC001B87BA /* MainLeftController.swift in Sources */,
+				8E11BDB41E90C6420029A7EB /* APIRouter.swift in Sources */,
 				8E9FBDB01E7FA7F5001B87BA /* ModelProtocol.swift in Sources */,
 				8E8F7A801E8FADA900B061E4 /* GPBArray.m in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
