@@ -18,10 +18,10 @@ struct DataOutputStream {
         self.lenght = 0
     }
     
-    mutating func writeShort(_ v: Int16) {
-        var ch = [Int16](repeating: 0, count: 2)
-        ch[0] = (v & 0x0ff)>>8
-        ch[1] = (v & 0x0ff)
+    mutating func writeShort(_ v: Int32) {
+        var ch = [Int8](repeating: 0, count: 2)
+        ch[0] = Int8((v & 0x0ff00)>>8)
+        ch[1] = Int8(v & 0x0ff)
         data.append(ch, length: 2)
         self.lenght = self.lenght + 2
     }
@@ -53,9 +53,9 @@ extension DataOutputStream {
     mutating func write(_ header: apiHeader) {
                 writeShort(1)
         writeShort(0)
-        writeShort(Int16(header.sid))
-        writeShort(Int16(header.cid))
-        writeShort(Int16(header.seq))
+        writeShort(Int32(header.sid))
+        writeShort(Int32(header.cid))
+        writeShort(Int32(header.seq))
         writeShort(1)
     }
 }

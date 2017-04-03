@@ -20,11 +20,11 @@ struct IMLoginManager: IMloginProtocol {
         connectTcp { (response) in
             switch response {
             case .Success(_):
-                var api = IMLoginAPI()
-                let clientVersion = "MAC/3.1.5-3.1.5.2"
-                let deviceToken   = "token_\(NSDate().timeIntervalSince1970)"
-                let  params = (id,token, deviceToken,clientVersion)
-                api.request(params,self.loginCallBack)
+                    var api = IMLoginAPI()
+                    let clientVersion = "MAC/3.1.5-3.1.5.2"
+                    let deviceToken   = "token_\(NSDate().timeIntervalSince1970)"
+                    let  params = (id,token, deviceToken,clientVersion)
+                    api.request(params,self.loginCallBack)
                 break
             case .Failure(_):
                 break

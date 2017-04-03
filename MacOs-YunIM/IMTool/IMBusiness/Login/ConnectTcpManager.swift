@@ -23,7 +23,10 @@ class ConnectTcpManager: NSObject {
         callBack?(.Failure("链接超时"))
     }
     func tcpConntectSuccess() {
-        callBack?(.Success(1))
+        if connecting {
+            connecting = false
+            self.callBack?(.Success(1))
+        }
     }
     func connectTCP(callBack: @escaping callBack) {
         

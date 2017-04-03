@@ -44,10 +44,10 @@ struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
         login.userId = user.0
         login.onlineStatus = .userStatusOnline
         login.token  = user.1
-        login.clientType = .clientTypeMac
+        login.clientType = .clientTypeIos
         login.deviceId   = user.2
         login.clientVersion = user.3
-        dataout.directWriteBytes(login.data() as! NSData)
+        dataout.directWriteBytes((login.data() as? NSData)!)
         dataout.writeDataCount()
         return dataout.data
     }

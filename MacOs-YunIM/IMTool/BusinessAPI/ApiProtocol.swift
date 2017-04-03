@@ -37,7 +37,9 @@ extension ApiProtocol where Self: ApiHeaderProtocol {
         //4.数据打包
         //5.发送数据
         if let data = self.package(data) {
-            TcpManager.share.send(data)
+            DispatchQueue.main.async {
+                TcpManager.share.send(data)
+            }
         }
         
     }

@@ -9,7 +9,7 @@
 import Cocoa
 
 /// 定义元组 包头主要信息 区分业务
-typealias apiHeader = (cid: Int,sid: Int,seq: Int)
+typealias apiHeader = (sid: Int,cid: Int,seq: Int)
 
 struct APIRouter {
     

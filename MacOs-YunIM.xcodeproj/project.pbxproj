@@ -458,11 +458,11 @@
 		8E8F7A8F1E8FB37200B061E4 /* TCPManager */ = {
 			isa = PBXGroup;
 			children = (
-				8E11BDC21E91FAA70029A7EB /* SendBuffer.swift */,
 				8E8F7A901E8FB3D000B061E4 /* TcpManager.swift */,
 				8E11BDB31E90C6420029A7EB /* APIRouter.swift */,
 				8E8F7A921E900C3E00B061E4 /* DataInputStream.swift */,
 				8E11BDC61E9228F80029A7EB /* DataOutputStream.swift */,
+				8E11BDC21E91FAA70029A7EB /* SendBuffer.swift */,
 			);
 			path = TCPManager;
 			sourceTree = "<group>";
