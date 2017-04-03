@@ -36,7 +36,19 @@ struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
     //MARK: 发送数据时 处理数据
     internal func package(_ data: Any) -> NSData? {
         
-        
-        return nil
+        let user  = data as! (String, String, String, String)
+        var dataout = DataOutputStream()
+        dataout.writeInt(1)
+        dataout.write(requestHeader)
+        let login = IMLoginReq()
+        login.userId = user.0
+        login.onlineStatus = .userStatusOnline
+        login.token  = user.1
+        login.clientType = .clientTypeMac
+        login.deviceId   = user.2
+        login.clientVersion = user.3
+        dataout.directWriteBytes(login.data() as! NSData)
+        dataout.writeDataCount()
+        return dataout.data
     }
 }

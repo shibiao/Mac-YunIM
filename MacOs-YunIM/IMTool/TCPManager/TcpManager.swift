@@ -16,7 +16,7 @@ class TcpManager :NSObject, StreamDelegate {
     var receiveLock     :   NSLock?          = NSLock()
     var sendLock        :   NSLock?          = NSLock()
     //是否还有未发送的数据
-    var noSendData      :   Bool             = false
+    var noSendData      :   Bool             = true
     var receiveBuffer   :   NSMutableData?   = NSMutableData()
     var sendLastBuffer  :   SendBuffer?      = SendBuffer()
     var sendBuffers     :  [SendBuffer]?     = [SendBuffer]()
@@ -62,6 +62,7 @@ class TcpManager :NSObject, StreamDelegate {
         case Stream.Event.errorOccurred:// 发生错误
             break
         case Stream.Event.hasBytesAvailable://接受数据
+            receiveData()
             break
         case Stream.Event.hasSpaceAvailable://发送数据
             hasSpaceAvailable(aStream)
@@ -112,69 +113,71 @@ class TcpManager :NSObject, StreamDelegate {
     //MARK: 发送数据
     func send(_ data: NSData) {
         sendLock?.lock()
-        defer {
-            sendLock?.unlock()
-        }
         if noSendData {//如果没有未发送的数据
             let p = data.bytes.assumingMemoryBound(to: UInt8.self)
-            if let len = outputStream?.write(p, maxLength: data.length) , len < data.length {//如果写入的数据小于数据长度
+            let lenght = outputStream?.write(p, maxLength: data.length)
+            if let len = lenght , len < data.length {//如果写入的数据小于数据长度
                 let lastData = data.subdata(with: NSMakeRange(len, data.length-len))
                 sendLastBuffer = SendBuffer(data: lastData)
                 sendBuffers?.append(sendLastBuffer!)
             }
+            sendLock?.unlock()
             return
         }
         if let lastBuffer = sendLastBuffer {
             let len = lastBuffer.length
             if len < 1024 {
                 sendLastBuffer?.append(data as Data)
+                sendLock?.unlock()
                 return
             }
         } else {
             sendLastBuffer = SendBuffer(data: data as Data)
             sendBuffers?.append(sendLastBuffer!)
+            sendLock?.unlock()
         }
     }
     //MARK: 发送数据时的回调 处理发送后一些异常情况
     private func hasSpaceAvailable(_ aStream: Stream) {
-        sendLock?.lock()
-        defer {
-            sendLock?.unlock()
-        }
-        if let count = sendBuffers?.count , count == 0 {
-            noSendData = true
-            return
-        }
-        if  let sendBuffer = sendBuffers?[0] {
-            if sendBuffer.length == 0 {
-                if sendBuffer == sendLastBuffer {
-                    sendLastBuffer = nil
-                }
-                sendBuffers?.removeLast()
-                noSendData = true
-                return;
-            }
-            let len = (sendBuffer.length - sendBuffer.consumeLen >= 1024) ? 1024 : sendBuffer.length - sendBuffer.consumeLen
-            if len == 0 {
-                if sendBuffer == sendLastBuffer {
-                    sendLastBuffer = nil
-                }
-                sendBuffers?.removeLast()
-                noSendData = true
-                return;
-            }
-            let p = sendBuffer.bytes.assumingMemoryBound(to: UInt8.self) + sendBuffer.consumeLen
-            if let sendLen = outputStream?.write(p, maxLength: len) {
-                sendBuffer.consume(sendLen)
-            }
-            if sendBuffer.length == 0 {
-                if sendBuffer == sendLastBuffer {
-                    sendLastBuffer = nil
-                }
-                sendBuffers?.removeLast()
-            }
-            noSendData = false
-        }
+//        sendLock?.lock()
+//        if let count = sendBuffers?.count , count == 0 {
+//            noSendData = true
+//            sendLock?.unlock()
+//            return
+//        }
+//        if  let sendBuffer = sendBuffers?[0] {
+//            if sendBuffer.length == 0 {
+//                if sendBuffer == sendLastBuffer {
+//                    sendLastBuffer = nil
+//                }
+//                sendBuffers?.removeLast()
+//                noSendData = true
+//                sendLock?.unlock()
+//                return;
+//            }
+//            let len = (sendBuffer.length - sendBuffer.consumeLen >= 1024) ? 1024 : sendBuffer.length - sendBuffer.consumeLen
+//            if len == 0 {
+//                if sendBuffer == sendLastBuffer {
+//                    sendLastBuffer = nil
+//                }
+//                sendBuffers?.removeLast()
+//                noSendData = true
+//                sendLock?.unlock()
+//                return;
+//            }
+//            let p = sendBuffer.bytes.assumingMemoryBound(to: UInt8.self) + sendBuffer.consumeLen
+//            if let sendLen = outputStream?.write(p, maxLength: len) {
+//                sendBuffer.consume(sendLen)
+//            }
+//            if sendBuffer.length == 0 {
+//                if sendBuffer == sendLastBuffer {
+//                    sendLastBuffer = nil
+//                }
+//                sendBuffers?.removeLast()
+//            }
+//            noSendData = false
+//            sendLock?.unlock()
+//        }
     }
     func openCompleted() {
         NotificationCenter.default.post(name: NSNotification.Name.TcpConntectSuccess, object: nil)
@@ -187,6 +190,7 @@ extension Stream {
         var outputStream: Unmanaged<CFWriteStream>?
         host = CFHostCreateWithName(nil, ip as CFString).takeRetainedValue()
         CFStreamCreatePairWithSocketToCFHost(nil, host, port, &inputStream, &outputStream)
+//        CFStreamCreatePairWithSocketToHost(nil, ip as CFString!, UInt32(port), &inputStream, &outputStream)
         if ((inputStream != nil) && (outputStream != nil)) {
             input = inputStream!.takeUnretainedValue();
             output = outputStream!.takeUnretainedValue();

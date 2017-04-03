@@ -7,3 +7,5 @@
 #import <YYModel/YYModel.h>
 #import "ImBaseDefine.pbobjc.h"
 #import "ImLogin.pbobjc.h"
+#import "GPBMessage_PackagePrivate.h"
+
