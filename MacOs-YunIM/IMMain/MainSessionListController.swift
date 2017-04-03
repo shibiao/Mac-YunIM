@@ -28,7 +28,7 @@ class MainSessionListController: NSViewController,NSCollectionViewDelegate,NSCol
         let nib = NSNib(nibNamed: "MainSessionItem", bundle: nil)
         collectionView.register(nib, forItemWithIdentifier: "MainSessionItem")
         let layout = NSCollectionViewFlowLayout()
-        layout.minimumLineSpacing = 1
+        layout.minimumLineSpacing = 0.5
         collectionView.collectionViewLayout = layout
     }
     
@@ -36,7 +36,7 @@ class MainSessionListController: NSViewController,NSCollectionViewDelegate,NSCol
         return NSMakeSize(self.collectionView.frame.size.width, 80)
     }
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 20
     }
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: "MainSessionItem", for: indexPath) as? MainSessionItem
