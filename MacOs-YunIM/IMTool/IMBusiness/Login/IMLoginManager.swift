@@ -24,14 +24,20 @@ struct IMLoginManager: IMloginProtocol {
                     let clientVersion = "MAC/3.1.5-3.1.5.2"
                     let deviceToken   = "token_\(NSDate().timeIntervalSince1970)"
                     let  params = (id,token, deviceToken,clientVersion)
-                    api.request(params,self.loginCallBack)
+                    api.request(params, { (spo) in
+                        switch spo {
+                        case .Success(let json):
+                            break
+                        case .Failure(_):
+                            break
+                        }
+                    
+                    
+                    })
                 break
             case .Failure(_):
                 break
             }
         }
-    }
-    func loginCallBack(response: Response<Any, String>) -> Void {
-        
     }
 }

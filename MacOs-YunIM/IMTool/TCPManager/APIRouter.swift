@@ -11,7 +11,7 @@ import Cocoa
 /// 定义元组 包头主要信息 区分业务
 typealias apiHeader = (sid: Int,cid: Int,seq: Int)
 
-struct APIRouter {
+class APIRouter {
     
     var responses = [String : ApiProtocol]()
     static let  manager = APIRouter()
@@ -19,23 +19,30 @@ struct APIRouter {
     public func register(_ api: ApiProtocol) -> Bool {
         
         
-        
-        return true
+        if !responses.keys.contains(ApiTransfer(api.responseHeader)) {
+            responses[ApiTransfer(api.responseHeader)] = api
+            return true
+        } else {
+            return true
+        }
     }
     //MARK: 2.接受到数据，根据header 查找api
     public func receive(_ loadData: NSData , _ header: apiHeader){
         //1.根据header 去查找相关api
         if let api = responses[ApiTransfer(header)]  {
         //2.处理数据
-          let data = api.analysis(loadData)
-            DispatchQueue.main.sync {
+            let data = api.analysis(loadData)
+        //3.销毁注册的api
+            dismissApi(api)
         //3.callback返回数据
-                api.callBack?(.Success(data))
-            }
+            api.callBack?(.Success(data))
         }
         
     }
-    //MARK: 3.调用相关api
+    //MARK: 3.销毁api
+    func dismissApi(_ api: ApiProtocol) {
+        responses[ApiTransfer(api.responseHeader)] = nil
+    }
     //MARK: 4.
     //MARK: 5.tuples
 

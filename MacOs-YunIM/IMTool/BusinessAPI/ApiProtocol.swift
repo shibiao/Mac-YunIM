@@ -15,13 +15,13 @@ protocol ApiProtocol {
     func analysis(_ data: NSData) -> Any
     func package(_ data: Any) -> NSData?
     var  callBack : callBack? {get set}
-}
-protocol ApiHeaderProtocol {
     var requestHeader   : apiHeader {get}
     var responseHeader  : apiHeader {get}
     var seq             : Int       {get set}
 }
-extension ApiProtocol where Self: ApiHeaderProtocol {
+protocol ApiHeaderProtocol {
+}
+extension ApiProtocol {
     
     mutating func request(_ data: Any,_ callBack: @escaping callBack) {
         //1. 序列号 区分api

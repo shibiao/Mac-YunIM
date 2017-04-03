@@ -69,7 +69,6 @@
 		8E9FBDB21E7FA812001B87BA /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB11E7FA812001B87BA /* LoginModel.swift */; };
 		8E9FBDB41E7FB43C001B87BA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */; };
 		8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB51E802CDA001B87BA /* NHLoginTool.swift */; };
-		8E9FBDBA1E8035CC001B87BA /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDB91E8035CC001B87BA /* Model.m */; };
 		8E9FBDBC1E8038DF001B87BA /* UserPofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBB1E8038DF001B87BA /* UserPofile.swift */; };
 		8E9FBDBE1E8041EC001B87BA /* MainLeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBD1E8041EC001B87BA /* MainLeftController.swift */; };
 		8E9FBDC01E805684001B87BA /* MainSessionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBF1E805684001B87BA /* MainSessionListController.swift */; };
@@ -187,8 +186,6 @@
 		8E9FBDB31E7FB43C001B87BA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E9FBDB51E802CDA001B87BA /* NHLoginTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHLoginTool.swift; sourceTree = "<group>"; };
 		8E9FBDB71E8035CB001B87BA /* MacOs-YunIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacOs-YunIM-Bridging-Header.h"; sourceTree = "<group>"; };
-		8E9FBDB81E8035CC001B87BA /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		8E9FBDB91E8035CC001B87BA /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8E9FBDBB1E8038DF001B87BA /* UserPofile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPofile.swift; sourceTree = "<group>"; };
 		8E9FBDBD1E8041EC001B87BA /* MainLeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLeftController.swift; sourceTree = "<group>"; };
 		8E9FBDBF1E805684001B87BA /* MainSessionListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionListController.swift; sourceTree = "<group>"; };
@@ -240,8 +237,6 @@
 			children = (
 				8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */,
 				8E09B6F71E7BD3E300009BC4 /* AppDelegate+Login.swift */,
-				8E9FBDB81E8035CC001B87BA /* Model.h */,
-				8E9FBDB91E8035CC001B87BA /* Model.m */,
 				8E09B6F91E7BD3EF00009BC4 /* Login */,
 				8E9FBD831E7EDEE6001B87BA /* IMMain */,
 				8E8F7A1C1E8FAD1200B061E4 /* IMTool */,
@@ -285,8 +280,8 @@
 		8E11BDB51E9100E40029A7EB /* BusinessAPI */ = {
 			isa = PBXGroup;
 			children = (
-				8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */,
 				8E11BDB81E9107D70029A7EB /* ApiProtocol.swift */,
+				8E11BDB61E9107900029A7EB /* IMLoginAPI.swift */,
 			);
 			path = BusinessAPI;
 			sourceTree = "<group>";
@@ -647,7 +642,6 @@
 				8E8F7A7A1E8FADA900B061E4 /* FieldMask.pbobjc.m in Sources */,
 				8E8F7A931E900C3E00B061E4 /* DataInputStream.swift in Sources */,
 				8E8F7A851E8FADA900B061E4 /* GPBExtensionInternals.m in Sources */,
-				8E9FBDBA1E8035CC001B87BA /* Model.m in Sources */,
 				8E11BDC71E9228F80029A7EB /* DataOutputStream.swift in Sources */,
 				8E8F7A731E8FADA900B061E4 /* ImMessage.pbobjc.m in Sources */,
 				8E8F7A821E8FADA900B061E4 /* GPBCodedOutputStream.m in Sources */,
