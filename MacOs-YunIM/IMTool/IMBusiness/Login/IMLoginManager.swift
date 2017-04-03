@@ -16,7 +16,7 @@ struct IMLoginManager: IMloginProtocol {
         loginTcp.port = IM_Port
         loginTcp.connectTCP(callBack: callBack)
     }
-    func login(_ token: String, id: String, callBack: callBack) {
+    func login(_ token: String, id: String, callBack: @escaping callBack) {
         connectTcp { (response) in
             switch response {
             case .Success(_):
@@ -24,16 +24,7 @@ struct IMLoginManager: IMloginProtocol {
                     let clientVersion = "MAC/3.1.5-3.1.5.2"
                     let deviceToken   = "token_\(NSDate().timeIntervalSince1970)"
                     let  params = (id,token, deviceToken,clientVersion)
-                    api.request(params, { (spo) in
-                        switch spo {
-                        case .Success(let json):
-                            break
-                        case .Failure(_):
-                            break
-                        }
-                    
-                    
-                    })
+                    api.request(params,callBack)
                 break
             case .Failure(_):
                 break

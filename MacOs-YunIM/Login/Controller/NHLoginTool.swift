@@ -30,7 +30,24 @@ struct NHLoginTool {
     }
     static func loginIM(_ id: String ,_ token: String) {
         IMChatMob.share.imLoginManager.login(token, id: id) { (response) in
-            
+            switch response {
+            case .Success(_):
+                let alert = NSAlert()
+                alert.messageText = "提示"
+                alert.informativeText = "IM登陆成功"
+                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
+                    
+                })
+                break
+            case .Failure(_):
+                let alert = NSAlert()
+                alert.messageText = "提示"
+                alert.informativeText = "IM登陆失败"
+                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
+                    
+                })
+                break
+            }
         }
     }
     static func userPofile(_ request: @escaping callBack) {
