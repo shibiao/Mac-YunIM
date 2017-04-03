@@ -83,10 +83,23 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
             case .Success( _):
                 app.showMainWindowController()
                 NHLoginTool.userPofile(self.userRequest)
+                let alert = NSAlert()
+                alert.messageText = "提示"
+                alert.informativeText = "IM登陆成功"
+                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
+                    
+                })
                 break
-            case .Failure(let _):
+            case .Failure(let error):
+                let alert = NSAlert()
+                alert.messageText = "提示"
+                alert.informativeText = error
+                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
+                    
+                })
                 break
             }
+            
         }
     }
     func userRequest(_ response: Response<Any, String>) {

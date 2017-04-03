@@ -19,20 +19,36 @@ struct NHRequest {
     static func request(_ url: String,request: @escaping callBack) {
         Alamofire.request(url,headers:UserAgent).responseJSON { (response) in
             switch response.result {
-            case .success(let data):
-                request(.Success(data))
+            case .success(let data as Dictionary<String, Any>):
+                if (data["error_code"] as! Int ) == 0 {
+                    request(.Success(data))
+                } else {
+                    request(.Failure("失败"))
+                }
+                break
             case .failure(let error):
                 request(.Failure(error.localizedDescription))
+                break
+            default:
+                break
             }
         }
     }
     static func request(_ url: String , parms: [String : Any]?,request: @escaping callBack) {
         Alamofire.request(url,method:.post,parameters:parms,headers:UserAgent).responseJSON { (response) in
             switch response.result {
-            case .success(let data):
-                request(.Success(data)) 
+            case .success(let data as Dictionary<String, Any>):
+                if (data["error_code"] as! Int ) == 0 {
+                    request(.Success(data))
+                } else {
+                    request(.Failure("失败"))
+                }
+                break
             case .failure(let error):
                 request(.Failure(error.localizedDescription))
+                break
+            default:
+                break
             }
         }
     }

@@ -25,7 +25,7 @@ class IMLoginAPI: ApiProtocol {
             let res = try IMLoginRes.parse(from: data as Data)
             let resultCode  = res.errCode
             let resultMsg   = res.errMsg
-            return ["resultCode": resultCode,"resultMsg": resultMsg ?? ""]
+            return ["resultCode": resultCode.rawValue,"resultMsg": resultMsg ?? ""]
         } catch _ {
             return ["resultCode": 1         ,"resultMsg": "数据解析失败"]
         }

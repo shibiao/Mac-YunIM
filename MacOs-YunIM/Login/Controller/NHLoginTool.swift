@@ -19,36 +19,16 @@ struct NHLoginTool {
             case .Success(let json):
                 let model = LoginModel.yy_model(withJSON: json)
                 model?.save()
-                request(.Success(model ?? LoginModel()))
                 if let user = model {
-                    loginIM(user.id, user.session_token)
+                    loginIM(user.id, user.session_token,callBack: request)
                 }
             case .Failure(let error):
                 request(.Failure(error))
             }
         }
     }
-    static func loginIM(_ id: String ,_ token: String) {
-        IMChatMob.share.imLoginManager.login(token, id: id) { (response) in
-            switch response {
-            case .Success(_):
-                let alert = NSAlert()
-                alert.messageText = "提示"
-                alert.informativeText = "IM登陆成功"
-                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
-                    
-                })
-                break
-            case .Failure(_):
-                let alert = NSAlert()
-                alert.messageText = "提示"
-                alert.informativeText = "IM登陆失败"
-                alert.beginSheetModal(for:app.mainWindow.window! , completionHandler: { (modal) in
-                    
-                })
-                break
-            }
-        }
+    static func loginIM(_ id: String ,_ token: String ,callBack: @escaping callBack) {
+        IMChatMob.share.imLoginManager.login(token, id: id,callBack:callBack)
     }
     static func userPofile(_ request: @escaping callBack) {
         NHRequest.request(ApiUserPofile.token) { (response) in

@@ -24,7 +24,22 @@ struct IMLoginManager: IMloginProtocol {
                     let clientVersion = "MAC/3.1.5-3.1.5.2"
                     let deviceToken   = "token_\(NSDate().timeIntervalSince1970)"
                     let  params = (id,token, deviceToken,clientVersion)
-                    api.request(params,callBack)
+                    api.request(params, { (api) in
+                        switch api {
+                        case .Success(let json as Dictionary<String, Any>):
+                            if (json["resultCode"] as! Int32) == 0 {
+                                callBack(.Success(0))
+                            } else {
+                                callBack(.Failure("失败"))
+                            }
+                            break
+                        case .Failure(_):
+                            callBack(.Failure("失败"))
+                            break
+                        default:
+                            break
+                        }
+                    })
                 break
             case .Failure(_):
                 break
