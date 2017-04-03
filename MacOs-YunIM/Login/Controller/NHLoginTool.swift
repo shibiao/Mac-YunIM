@@ -17,13 +17,20 @@ struct NHLoginTool {
         NHRequest.request(ApiLogin.noneToken, parms: parms) { (response) in
             switch response {
             case .Success(let json):
-               let model = LoginModel.yy_model(withJSON: json)
-               model?.save()
-
-            request(.Success(model ?? LoginModel()))
+                let model = LoginModel.yy_model(withJSON: json)
+                model?.save()
+                request(.Success(model ?? LoginModel()))
+                if let user = model {
+                    loginIM(user.id, user.session_token)
+                }
             case .Failure(let error):
                 request(.Failure(error))
             }
+        }
+    }
+    static func loginIM(_ id: String ,_ token: String) {
+        IMChatMob.share.imLoginManager.login(token, id: id) { (response) in
+            
         }
     }
     static func userPofile(_ request: @escaping callBack) {

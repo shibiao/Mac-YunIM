@@ -55,6 +55,7 @@ class TcpManager :NSObject, StreamDelegate {
     func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
         switch eventCode {
         case Stream.Event.openCompleted:// 建立连接完成
+            openCompleted()
             break
         case Stream.Event.endEncountered:// 结束事件
             break
@@ -137,7 +138,9 @@ class TcpManager :NSObject, StreamDelegate {
     //MARK: 发送数据时的回调 处理发送后一些异常情况
     private func hasSpaceAvailable(_ aStream: Stream) {
         sendLock?.lock()
-        
+        defer {
+            sendLock?.unlock()
+        }
         if let count = sendBuffers?.count , count == 0 {
             noSendData = true
             return
@@ -172,9 +175,9 @@ class TcpManager :NSObject, StreamDelegate {
             }
             noSendData = false
         }
-        defer {
-            sendLock?.unlock()
-        }
+    }
+    func openCompleted() {
+        NotificationCenter.default.post(name: NSNotification.Name.TcpConntectSuccess, object: nil)
     }
 }
 extension Stream {
@@ -182,7 +185,7 @@ extension Stream {
         var host : CFHost
         var inputStream:  Unmanaged<CFReadStream>?
         var outputStream: Unmanaged<CFWriteStream>?
-        host = CFHostCreateWithName(nil, ip as CFString) as! CFHost
+        host = CFHostCreateWithName(nil, ip as CFString).takeRetainedValue()
         CFStreamCreatePairWithSocketToCFHost(nil, host, port, &inputStream, &outputStream)
         if ((inputStream != nil) && (outputStream != nil)) {
             input = inputStream!.takeUnretainedValue();

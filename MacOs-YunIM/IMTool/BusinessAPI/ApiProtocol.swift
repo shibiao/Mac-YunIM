@@ -14,7 +14,7 @@ public var globalSeq = 0
 protocol ApiProtocol {
     func analysis(_ data: NSData) -> Any
     func package(_ data: Any) -> NSData?
-    var  callBack : (Any) ->() {get set}
+    var  callBack : callBack? {get set}
 }
 protocol ApiHeaderProtocol {
     var requestHeader   : apiHeader {get}
@@ -23,7 +23,7 @@ protocol ApiHeaderProtocol {
 }
 extension ApiProtocol where Self: ApiHeaderProtocol {
     
-    mutating func request(_ data: Any, callBack: @escaping (Any)->()) {
+    mutating func request(_ data: Any,_ callBack: @escaping callBack) {
         //1. 序列号 区分api
         globalSeq += 1
         self.seq = globalSeq

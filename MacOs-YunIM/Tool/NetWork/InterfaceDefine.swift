@@ -7,6 +7,10 @@
 //
 
 import Cocoa
+//MARK: IM
+
+public let IM_PriorIP       = "test.yunwoke.com"
+public let IM_Port: Int32   =  9000
 
 //MARK: url
 public let BaseUrl = "http://iter.yunwoke.com/api/"

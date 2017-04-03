@@ -9,8 +9,8 @@
 import Cocoa
 
 struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
-    internal var callBack: (Any) -> ()
-    var seq : Int
+    internal var callBack: callBack?
+    var seq : Int = 0
     //MARK: 数据返回时候包头
     var responseHeader: apiHeader {
         return (Int(ServiceID.sidLogin.rawValue),Int(LoginCmdID.cidLoginResUserlogin.rawValue),seq)
@@ -18,6 +18,9 @@ struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
     //MARK: 请求的时候包头
     var requestHeader: apiHeader {
         return (Int(ServiceID.sidLogin.rawValue),Int(LoginCmdID.cidLoginReqUserlogin.rawValue),seq)
+    }
+    init() {
+        
     }
     //MARK: 收到数据时 处理数据
     public func analysis(_ data: NSData) -> Any {
@@ -32,6 +35,7 @@ struct IMLoginAPI: ApiProtocol,ApiHeaderProtocol {
     }
     //MARK: 发送数据时 处理数据
     internal func package(_ data: Any) -> NSData? {
+        
         
         return nil
     }

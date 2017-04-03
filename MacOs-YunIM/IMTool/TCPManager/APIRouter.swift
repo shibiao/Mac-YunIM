@@ -30,7 +30,7 @@ struct APIRouter {
           let data = api.analysis(loadData)
             DispatchQueue.main.sync {
         //3.callback返回数据
-                api.callBack(data)
+                api.callBack?(.Success(data))
             }
         }
         

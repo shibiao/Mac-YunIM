@@ -10,6 +10,6 @@ import Cocoa
 
 protocol IMloginProtocol {
     
-    
+    func login(_ token: String, id: String, callBack: callBack)
     
 }

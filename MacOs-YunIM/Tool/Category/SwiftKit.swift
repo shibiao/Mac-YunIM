@@ -8,7 +8,6 @@
 
 import Cocoa
 import CoreFoundation
-
 extension Int {
     func times(_ blcok: ()->()){
         for _ in 0..<self{
@@ -47,4 +46,9 @@ extension Optional {
         guard let unwrapped = self else { throw NilError(file: file, line: line) }
         return unwrapped
     }
+}
+extension NSNotification.Name {
+    public static let TcpConntectFailure = Notification.Name("TcpConntectFailure")
+    
+    public static let TcpConntectSuccess = Notification.Name("TcpConntectSuccess")    
 }
