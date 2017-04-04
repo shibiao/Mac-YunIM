@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041C20661E93CB35003F0658 /* IconImageView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C20651E93CB35003F0658 /* IconImageView .swift */; };
 		87F08AE0C504F1A83AA91F33 /* Pods_MacOs_YunIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */; };
 		8E09B6EB1E7BD3C700009BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */; };
 		8E09B6ED1E7BD3C700009BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E09B6EC1E7BD3C700009BC4 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		020E92223CAE9C3671289CFD /* Pods-MacOs-YunIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOs-YunIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacOs-YunIM/Pods-MacOs-YunIM.release.xcconfig"; sourceTree = "<group>"; };
+		041C20651E93CB35003F0658 /* IconImageView .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IconImageView .swift"; sourceTree = "<group>"; };
 		63292AE3F821849537F39D54 /* Pods-MacOs-YunIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOs-YunIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacOs-YunIM/Pods-MacOs-YunIM.debug.xcconfig"; sourceTree = "<group>"; };
 		8E09B6E71E7BD3C700009BC4 /* MacOs-YunIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOs-YunIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E09B6EA1E7BD3C700009BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				8E09B6FE1E7BD3EF00009BC4 /* LoginBottomView.swift */,
 				8E09B6FF1E7BD3EF00009BC4 /* LoginBottomView.xib */,
+				041C20651E93CB35003F0658 /* IconImageView .swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				8E09B6F81E7BD3E300009BC4 /* AppDelegate+Login.swift in Sources */,
 				8E9FBDB61E802CDA001B87BA /* NHLoginTool.swift in Sources */,
 				8E11BDC11E9150160029A7EB /* IMLoginManager.swift in Sources */,
+				041C20661E93CB35003F0658 /* IconImageView .swift in Sources */,
 				8E11BDB71E9107900029A7EB /* IMLoginAPI.swift in Sources */,
 				8E8F7A7F1E8FADA900B061E4 /* Wrappers.pbobjc.m in Sources */,
 				8E8F7A761E8FADA900B061E4 /* Any.pbobjc.m in Sources */,
