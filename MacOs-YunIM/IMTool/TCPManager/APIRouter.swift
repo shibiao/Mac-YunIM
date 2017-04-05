@@ -23,7 +23,7 @@ class APIRouter {
             responses[ApiTransfer(api.responseHeader)] = api
             return true
         } else {
-            return true
+            return false
         }
     }
     //MARK: 2.接受到数据，根据header 查找api
