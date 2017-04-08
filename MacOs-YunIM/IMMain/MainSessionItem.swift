@@ -21,4 +21,10 @@ class MainSessionItem: NSCollectionViewItem {
     
     }
     
+    var session : IMSessionModel? {
+        didSet {
+            
+        }
+    }
+    
 }

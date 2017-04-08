@@ -10,4 +10,6 @@ import Cocoa
 
 protocol IMSessionProtocol {
     
+    func loadSession(callBack:@escaping ([IMSessionModel])->())
+    
 }

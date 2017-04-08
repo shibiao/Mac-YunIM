@@ -9,5 +9,16 @@
 import Cocoa
 
 struct IMSessionManager: IMSessionProtocol{
-
+    func loadSession(callBack: @escaping ([IMSessionModel]) -> ()) {
+        IMRequest.loadSession { (response) in
+            switch response {
+            case .Success(let sessions):
+                callBack(sessions)
+                break
+            default:
+                callBack([])
+                break
+            }
+        }
+    }
 }

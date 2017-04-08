@@ -18,6 +18,7 @@ class IMSessionModel: NSObject {
     var type:           Int = 1
     /// 未读数
     var unread_cnt:     Int = 0
-//    var msg:            
+    /// 挂载的消息
+    var msg:            IMMessageModel?
 
 }
