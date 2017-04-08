@@ -33,6 +33,8 @@
 		8E3115DA1E99054B00C948BD /* IMMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3115D91E99054B00C948BD /* IMMessageModel.swift */; };
 		8E3115DC1E99058200C948BD /* IMMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3115DB1E99058200C948BD /* IMMessageProtocol.swift */; };
 		8E3115DE1E99059400C948BD /* IMMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3115DD1E99059400C948BD /* IMMessageManager.swift */; };
+		8E3115E11E99137000C948BD /* IMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3115E01E99137000C948BD /* IMRequest.swift */; };
+		8E3115E41E991D8F00C948BD /* IMDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3115E31E991D8F00C948BD /* IMDataBase.swift */; };
 		8E8F7A6D1E8FADA900B061E4 /* IM.BaseDefine.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */; };
 		8E8F7A6E1E8FADA900B061E4 /* IM.Login.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */; };
 		8E8F7A6F1E8FADA900B061E4 /* IM.Message.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8E8F7A201E8FADA800B061E4 /* IM.Message.proto */; };
@@ -113,6 +115,8 @@
 		8E3115D91E99054B00C948BD /* IMMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMMessageModel.swift; sourceTree = "<group>"; };
 		8E3115DB1E99058200C948BD /* IMMessageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMMessageProtocol.swift; sourceTree = "<group>"; };
 		8E3115DD1E99059400C948BD /* IMMessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMMessageManager.swift; sourceTree = "<group>"; };
+		8E3115E01E99137000C948BD /* IMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMRequest.swift; sourceTree = "<group>"; };
+		8E3115E31E991D8F00C948BD /* IMDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMDataBase.swift; sourceTree = "<group>"; };
 		8E8F7A1E1E8FADA800B061E4 /* IM.BaseDefine.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.BaseDefine.proto; sourceTree = "<group>"; };
 		8E8F7A1F1E8FADA800B061E4 /* IM.Login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Login.proto; sourceTree = "<group>"; };
 		8E8F7A201E8FADA800B061E4 /* IM.Message.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IM.Message.proto; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 		8E11BDBA1E914EF90029A7EB /* IMBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				8E3115E21E991D6D00C948BD /* DataBase */,
+				8E3115DF1E99136300C948BD /* IMHttpRequest */,
 				8E3115D81E9904F900C948BD /* Message */,
 				8E3115D11E98FF7900C948BD /* Session */,
 				8E11BDBD1E914FA50029A7EB /* Login */,
@@ -367,6 +373,22 @@
 				8E3115D91E99054B00C948BD /* IMMessageModel.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		8E3115DF1E99136300C948BD /* IMHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				8E3115E01E99137000C948BD /* IMRequest.swift */,
+			);
+			path = IMHttpRequest;
+			sourceTree = "<group>";
+		};
+		8E3115E21E991D6D00C948BD /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				8E3115E31E991D8F00C948BD /* IMDataBase.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		8E8F7A1C1E8FAD1200B061E4 /* IMTool */ = {
@@ -718,9 +740,11 @@
 				8E8F7A801E8FADA900B061E4 /* GPBArray.m in Sources */,
 				8E09B7001E7BD3EF00009BC4 /* NHLoginWindowController.swift in Sources */,
 				8E8F7A8A1E8FADA900B061E4 /* GPBUnknownFieldSet.m in Sources */,
+				8E3115E41E991D8F00C948BD /* IMDataBase.swift in Sources */,
 				8E8F7A831E8FADA900B061E4 /* GPBDescriptor.m in Sources */,
 				8E8F7A721E8FADA900B061E4 /* ImLogin.pbobjc.m in Sources */,
 				8E8F7A711E8FADA900B061E4 /* ImBaseDefine.pbobjc.m in Sources */,
+				8E3115E11E99137000C948BD /* IMRequest.swift in Sources */,
 				8E11BDC51E9216910029A7EB /* ConnectTcpManager.swift in Sources */,
 				8E8F7A7B1E8FADA900B061E4 /* SourceContext.pbobjc.m in Sources */,
 				8E11BDBC1E914F310029A7EB /* IMChatMob.swift in Sources */,
