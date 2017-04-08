@@ -13,15 +13,22 @@ struct IMChatMob {
     static let share = IMChatMob()
     //MARK: 登陆模块
     private var imlogin : IMloginProtocol
-    var imLoginManager : IMloginProtocol {
-        get {
-            return imlogin
-        }
+    private var imSession : IMSessionProtocol
+    private var imMessage : IMMessageProtocol
+    static var imLoginManager : IMloginProtocol {
+        return IMChatMob.share.imlogin
+    }
+    static var imSessionManager : IMSessionProtocol {
+        return IMChatMob.share.imSession
+    }
+    static var imMessageManager : IMMessageProtocol {
+        return IMChatMob.share.imMessage
     }
     init() {
         //模块初始化
         imlogin = IMLoginManager()
-        
+        imSession = IMSessionManager()
+        imMessage = IMMessageManager()
         //注册收到消息
         registerReceiveMessage()
     }
