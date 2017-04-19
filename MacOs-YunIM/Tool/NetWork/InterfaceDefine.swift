@@ -14,11 +14,15 @@ public let IM_Port: Int32   =  9000
 
 //MARK: url
 public let BaseUrl = "http://iter.yunwoke.com/api/"
+public let IMBaseUrl = "http://test.yunwoke.com:10011/"
 
 //MARK: 接口
 public let ApiLogin = "v2/user/signin"
 public let ApiUserPofile = "v2/user/profile"
 
+//MARK: IM接口
+
+public let IMSession = "v1/sessions"
 
 
 
@@ -40,5 +44,8 @@ extension String {
     }
     var noneToken: String {
         return BaseUrl + self
+    }
+    var imToken: String {
+        return IMBaseUrl + self + "?session_token=" + LoginModel.session_token
     }
 }

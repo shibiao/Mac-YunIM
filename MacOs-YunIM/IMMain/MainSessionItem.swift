@@ -41,4 +41,5 @@ class MainSessionItem: NSCollectionViewItem {
             backgroundView.layer?.backgroundColor = normalColor.cgColor
         }
     }
+
 }

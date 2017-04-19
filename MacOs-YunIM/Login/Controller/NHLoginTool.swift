@@ -28,7 +28,8 @@ struct NHLoginTool {
         }
     }
     static func loginIM(_ id: String ,_ token: String ,callBack: @escaping callBack) {
-        IMChatMob.share.imLoginManager.login(token, id: id,callBack:callBack)
+        IMChatMob.imLoginManager.login(token, id: id,callBack:callBack)
+        
     }
     static func userPofile(_ request: @escaping callBack) {
         NHRequest.request(ApiUserPofile.token) { (response) in

@@ -13,6 +13,7 @@ class MainSessionListController: NSViewController,NSCollectionViewDelegate,NSCol
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
+    var sessions : [IMSessionModel] = []
     
     let grayColor = NSColor(red:0.95, green:0.95, blue:0.95, alpha:1.00)
     override func viewDidLoad() {
@@ -30,16 +31,24 @@ class MainSessionListController: NSViewController,NSCollectionViewDelegate,NSCol
         let layout = NSCollectionViewFlowLayout()
         layout.minimumLineSpacing = 0.5
         collectionView.collectionViewLayout = layout
+        getSssions()
     }
-    
+    func getSssions() {
+        IMChatMob.imSessionManager.loadSession { (sessions) in
+            self.sessions = sessions
+            self.collectionView.reloadData()
+        }
+    }
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
         return NSMakeSize(self.collectionView.frame.size.width, 80)
     }
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return sessions.count
     }
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+
         let item = collectionView.makeItem(withIdentifier: "MainSessionItem", for: indexPath) as! MainSessionItem
         return item 
+
     }
 }
