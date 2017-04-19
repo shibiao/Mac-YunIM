@@ -39,7 +39,7 @@ class MainSessionListController: NSViewController,NSCollectionViewDelegate,NSCol
         return 20
     }
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: "MainSessionItem", for: indexPath) as? MainSessionItem
-        return item ?? NSCollectionViewItem()
+        let item = collectionView.makeItem(withIdentifier: "MainSessionItem", for: indexPath) as! MainSessionItem
+        return item 
     }
 }

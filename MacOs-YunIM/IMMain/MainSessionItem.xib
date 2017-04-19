@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainSessionItem" customModule="MacOs_YunIM" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="ZYg-H5-ekw" id="EjJ-BF-NF5"/>
+                <outlet property="name" destination="9kz-cs-Zey" id="DCU-k7-jve"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -29,10 +30,21 @@
                             </constraints>
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_0959" id="e9F-PK-Qil"/>
                         </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kz-cs-Zey">
+                            <rect key="frame" x="78" y="33" width="384" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="云沃克" id="j1Q-BT-wLb">
+                                <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="9kz-cs-Zey" firstAttribute="top" secondItem="IjJ-BD-R4V" secondAttribute="top" id="AT9-fb-I2l"/>
+                        <constraint firstAttribute="trailing" secondItem="9kz-cs-Zey" secondAttribute="trailing" constant="20" id="CHA-1H-aaZ"/>
                         <constraint firstItem="IjJ-BD-R4V" firstAttribute="centerY" secondItem="ZYg-H5-ekw" secondAttribute="centerY" id="DO2-Cx-6eh"/>
                         <constraint firstItem="IjJ-BD-R4V" firstAttribute="leading" secondItem="ZYg-H5-ekw" secondAttribute="leading" constant="20" id="GRU-Op-xZe"/>
+                        <constraint firstItem="9kz-cs-Zey" firstAttribute="leading" secondItem="IjJ-BD-R4V" secondAttribute="trailing" constant="10" id="dbY-KX-IZ3"/>
                     </constraints>
                 </customView>
             </subviews>

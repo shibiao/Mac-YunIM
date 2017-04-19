@@ -74,6 +74,7 @@
 		8E9FBDC01E805684001B87BA /* MainSessionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FBDBF1E805684001B87BA /* MainSessionListController.swift */; };
 		8EEA36DE1E80591C0098438D /* MainSessionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA36DC1E80591C0098438D /* MainSessionItem.swift */; };
 		8EEA36DF1E80591C0098438D /* MainSessionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEA36DD1E80591C0098438D /* MainSessionItem.xib */; };
+		911096001EA7529D00CF941B /* MainRightChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911095FF1EA7529D00CF941B /* MainRightChatController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +192,7 @@
 		8E9FBDBF1E805684001B87BA /* MainSessionListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionListController.swift; sourceTree = "<group>"; };
 		8EEA36DC1E80591C0098438D /* MainSessionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionItem.swift; sourceTree = "<group>"; };
 		8EEA36DD1E80591C0098438D /* MainSessionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainSessionItem.xib; sourceTree = "<group>"; };
+		911095FF1EA7529D00CF941B /* MainRightChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRightChatController.swift; sourceTree = "<group>"; };
 		EB0278F3E3FCED4FFAA9E33F /* Pods_MacOs_YunIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOs_YunIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -471,6 +473,7 @@
 				8E9FBDBF1E805684001B87BA /* MainSessionListController.swift */,
 				8EEA36DC1E80591C0098438D /* MainSessionItem.swift */,
 				8EEA36DD1E80591C0098438D /* MainSessionItem.xib */,
+				911095FF1EA7529D00CF941B /* MainRightChatController.swift */,
 			);
 			path = IMMain;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				8E11BDBC1E914F310029A7EB /* IMChatMob.swift in Sources */,
 				8E8F7A951E90157300B061E4 /* SwiftKit.swift in Sources */,
 				8E8F7A911E8FB3D000B061E4 /* TcpManager.swift in Sources */,
+				911096001EA7529D00CF941B /* MainRightChatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

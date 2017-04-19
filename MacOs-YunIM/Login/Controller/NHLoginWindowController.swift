@@ -39,7 +39,11 @@ class NHLoginWindowController: NSWindowController,NSDrawerDelegate,NSTextFieldDe
         passWordTF.delegate = self;
         btn.target = self
         btn.action = #selector(NHLoginWindowController.bottomClick(_:))
-        PhoneTextFT.becomeFirstResponder()
+        if PhoneTextFT.stringValue.isEmpty {
+            PhoneTextFT.becomeFirstResponder()
+        }else{
+            passWordTF.becomeFirstResponder()
+        }
     }
     func bottomClick(_ sender : NSButton) {
         if (bottomDrawer != nil) {

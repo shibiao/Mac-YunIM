@@ -119,7 +119,7 @@
         <!--RightView-->
         <scene sceneID="uMz-Es-HQt">
             <objects>
-                <viewController title="RightView" id="JNb-YA-PgW" sceneMemberID="viewController">
+                <viewController title="RightView" id="JNb-YA-PgW" customClass="MainRightChatController" customModule="MacOs_YunIM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="BqT-Ux-QRF">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="367"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -331,6 +331,9 @@
                             <constraint firstAttribute="trailing" secondItem="0Hc-fx-Krb" secondAttribute="trailing" id="xNG-Id-HGW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XO8-az-xAX" id="MZy-9C-IE2"/>
+                    </connections>
                 </viewController>
                 <customObject id="Wsj-Ry-0TU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

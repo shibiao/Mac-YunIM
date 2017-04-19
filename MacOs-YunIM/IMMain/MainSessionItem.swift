@@ -13,6 +13,8 @@ class MainSessionItem: NSCollectionViewItem {
     let selectedColor = NSColor(red:0.86, green:0.86, blue:0.86, alpha:1.00)
     //背景视图
     @IBOutlet weak var backgroundView: NSView!
+    @IBOutlet weak var name: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundView.wantsLayer = true
