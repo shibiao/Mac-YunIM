@@ -19,7 +19,9 @@ class MainLeftController: NSViewController {
         view.layer?.backgroundColor = NSColor(red:0.15, green:0.15, blue:0.15, alpha:1.00).cgColor
         
         let iconUrl = URL(string: UserPofile.avatar)
-        userIcon.kf.setImage(with: ImageResource(downloadURL:iconUrl!))
+        if  let url = iconUrl {
+            userIcon.kf.setImage(with: ImageResource(downloadURL:url))
+        }
     }
     
 }

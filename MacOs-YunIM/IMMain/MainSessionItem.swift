@@ -9,16 +9,34 @@
 import Cocoa
 
 class MainSessionItem: NSCollectionViewItem {
-
+    let normalColor = NSColor(red:0.96, green:0.96, blue:0.96, alpha:1.00)
+    let selectedColor = NSColor(red:0.86, green:0.86, blue:0.86, alpha:1.00)
+    //背景视图
+    @IBOutlet weak var backgroundView: NSView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor(red:0.91, green:0.91, blue:0.91, alpha:1.00).cgColor
-        
-//        backgroundView.wantsLayer = true
-//        backgroundView.layer?.backgroundColor = normalColor.cgColor
-
-    
+        backgroundView.wantsLayer = true
+        backgroundView.layer?.backgroundColor = normalColor.cgColor
     }
-    
+    //当collectionView item被选中时，改变颜色并更新颜色
+    override var isSelected: Bool{
+        didSet {
+            super.isSelected = isSelected
+            updateColor()
+        }
+    }
+    func updateColor() {
+        if isSelected {
+            switch highlightState {
+            case .none, .forDeselection:
+                backgroundView.layer?.backgroundColor = normalColor.cgColor
+            case .forSelection:
+                backgroundView.layer?.backgroundColor = selectedColor.cgColor
+            default:
+                break
+            }
+        }else{
+            backgroundView.layer?.backgroundColor = normalColor.cgColor
+        }
+    }
 }

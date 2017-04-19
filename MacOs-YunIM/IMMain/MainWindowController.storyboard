@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ANV-kp-z8q">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ANV-kp-z8q">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -279,7 +279,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="0Hc-fx-Krb">
                                 <rect key="frame" x="0.0" y="322" width="450" height="45"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xzy-JI-7NP">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzy-JI-7NP">
                                         <rect key="frame" x="18" y="14" width="120" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="OSE-CQ-azk"/>
@@ -345,9 +345,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="27" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Hd-wwf">
-                                <rect key="frame" x="16" y="382.5" width="167" height="22"/>
+                                <rect key="frame" x="16" y="383" width="167" height="22"/>
                                 <subviews>
-                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JNx-UF-WzA">
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNx-UF-WzA">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="7YF-Y7-af0"/>
@@ -385,13 +385,13 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="699-hc-MGS">
-                                <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="368"/>
                                 <clipView key="contentView" drawsBackground="NO" id="INX-ND-h6D">
-                                    <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="199" height="368"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="hWV-sW-aSr">
-                                            <rect key="frame" x="0.0" y="0.0" width="199" height="367.5"/>
+                                        <collectionView selectable="YES" allowsMultipleSelection="YES" id="hWV-sW-aSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="199" height="368"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="TPs-6d-Pyb">
                                                 <size key="itemSize" width="50" height="50"/>
